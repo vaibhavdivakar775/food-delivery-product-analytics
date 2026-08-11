@@ -1,0 +1,30 @@
+# Automated weekly metric monitoring.
+# The same SQL that produced the analysis runs on a schedule and fails the job when a
+# tracked metric breaches its RED threshold — so a regression pages someone instead of
+# waiting to be noticed in a monthly review.
+name: weekly-metric-monitor
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"     # every Monday 03:00 UTC (08:30 IST)
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas numpy scipy matplotlib
+      - name: Rebuild dataset
+        run: python3 src/generate_data.py
+      - name: Run monitor (exits non-zero on a RED metric)
+        run: python3 src/monitor.py
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-monitor
+          path: reports/weekly_monitor.md

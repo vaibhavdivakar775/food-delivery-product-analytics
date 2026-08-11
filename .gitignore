@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+logs/
+.venv/
+
+# Generated data — reproducible in ~10s with `python3 src/generate_data.py`,
+# and far too large for git (the events table alone is ~80 MB).
+data/*.csv
+data/*.db
+!data/samples/

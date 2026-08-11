@@ -1,0 +1,866 @@
+{
+  "headline": {
+    "registered_users": 60000.0,
+    "ordering_users": 40389.0,
+    "activation_rate_pct": 67.3,
+    "orders": 70005.0,
+    "gmv": 31277157.0,
+    "aov": 447.0,
+    "orders_per_ordering_user": 1.73,
+    "late_delivery_rate_pct": 20.7,
+    "avg_rating": 4.23
+  },
+  "north_star": {
+    "matured_new_users": 31727.0,
+    "repeated_users": 9503.0,
+    "repeat_30d_rate_pct": 29.95
+  },
+  "monthly_trend": [
+    {
+      "month": "2026-01",
+      "active_users": 5012,
+      "orders": 6097,
+      "gmv_lakh": 25.4,
+      "aov": 417.0,
+      "late_rate_pct": 20.7,
+      "discount_pct_of_gmv": 25.9
+    },
+    {
+      "month": "2026-02",
+      "active_users": 6655,
+      "orders": 8942,
+      "gmv_lakh": 39.1,
+      "aov": 437.0,
+      "late_rate_pct": 21.1,
+      "discount_pct_of_gmv": 20.5
+    },
+    {
+      "month": "2026-03",
+      "active_users": 8893,
+      "orders": 12608,
+      "gmv_lakh": 56.9,
+      "aov": 452.0,
+      "late_rate_pct": 20.9,
+      "discount_pct_of_gmv": 18.8
+    },
+    {
+      "month": "2026-04",
+      "active_users": 9934,
+      "orders": 13736,
+      "gmv_lakh": 62.6,
+      "aov": 456.0,
+      "late_rate_pct": 20.5,
+      "discount_pct_of_gmv": 18.5
+    },
+    {
+      "month": "2026-05",
+      "active_users": 11290,
+      "orders": 14949,
+      "gmv_lakh": 67.8,
+      "aov": 454.0,
+      "late_rate_pct": 20.4,
+      "discount_pct_of_gmv": 19.2
+    },
+    {
+      "month": "2026-06",
+      "active_users": 11190,
+      "orders": 13673,
+      "gmv_lakh": 61.0,
+      "aov": 446.0,
+      "late_rate_pct": 20.9,
+      "discount_pct_of_gmv": 20.7
+    }
+  ],
+  "cohort_matrix": {
+    "0": {
+      "2026-01": 100.0,
+      "2026-02": 100.0,
+      "2026-03": 100.0,
+      "2026-04": 100.0,
+      "2026-05": 100.0,
+      "2026-06": 100.0
+    },
+    "1": {
+      "2026-01": 26.6,
+      "2026-02": 26.9,
+      "2026-03": 23.9,
+      "2026-04": 23.2,
+      "2026-05": 18.8,
+      "2026-06": 0.0
+    },
+    "2": {
+      "2026-01": 18.2,
+      "2026-02": 15.5,
+      "2026-03": 11.3,
+      "2026-04": 7.4,
+      "2026-05": 0.0,
+      "2026-06": 0.0
+    },
+    "3": {
+      "2026-01": 11.3,
+      "2026-02": 8.7,
+      "2026-03": 5.4,
+      "2026-04": 0.0,
+      "2026-05": 0.0,
+      "2026-06": 0.0
+    },
+    "4": {
+      "2026-01": 6.5,
+      "2026-02": 4.6,
+      "2026-03": 0.0,
+      "2026-04": 0.0,
+      "2026-05": 0.0,
+      "2026-06": 0.0
+    },
+    "5": {
+      "2026-01": 3.2,
+      "2026-02": 0.0,
+      "2026-03": 0.0,
+      "2026-04": 0.0,
+      "2026-05": 0.0,
+      "2026-06": 0.0
+    }
+  },
+  "cohort_sizes": {
+    "2026-01": 5012,
+    "2026-02": 5321,
+    "2026-03": 6545,
+    "2026-04": 6984,
+    "2026-05": 8141,
+    "2026-06": 8386
+  },
+  "cohort_by_late": [
+    {
+      "segment": "First delivery LATE",
+      "period_index": 0,
+      "retention_pct": 100.0,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery LATE",
+      "period_index": 1,
+      "retention_pct": 12.9,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery LATE",
+      "period_index": 2,
+      "retention_pct": 5.5,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery LATE",
+      "period_index": 3,
+      "retention_pct": 2.4,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery LATE",
+      "period_index": 4,
+      "retention_pct": 1.0,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery LATE",
+      "period_index": 5,
+      "retention_pct": 0.3,
+      "cohort_size": 8868
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 0,
+      "retention_pct": 100.0,
+      "cohort_size": 31521
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 1,
+      "retention_pct": 20.1,
+      "cohort_size": 31521
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 2,
+      "retention_pct": 8.0,
+      "cohort_size": 31521
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 3,
+      "retention_pct": 3.7,
+      "cohort_size": 31521
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 4,
+      "retention_pct": 1.5,
+      "cohort_size": 31521
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "period_index": 5,
+      "retention_pct": 0.4,
+      "cohort_size": 31521
+    }
+  ],
+  "funnel_overall": [
+    {
+      "step_no": 1,
+      "event_name": "app_open",
+      "sessions": 342573,
+      "pct_of_top": 100.0,
+      "step_conv_pct": NaN,
+      "step_dropoff_pct": NaN
+    },
+    {
+      "step_no": 2,
+      "event_name": "search",
+      "sessions": 295276,
+      "pct_of_top": 86.2,
+      "step_conv_pct": 86.2,
+      "step_dropoff_pct": 13.8
+    },
+    {
+      "step_no": 3,
+      "event_name": "restaurant_view",
+      "sessions": 246474,
+      "pct_of_top": 71.9,
+      "step_conv_pct": 83.5,
+      "step_dropoff_pct": 16.5
+    },
+    {
+      "step_no": 4,
+      "event_name": "add_to_cart",
+      "sessions": 179640,
+      "pct_of_top": 52.4,
+      "step_conv_pct": 72.9,
+      "step_dropoff_pct": 27.1
+    },
+    {
+      "step_no": 5,
+      "event_name": "checkout_start",
+      "sessions": 107128,
+      "pct_of_top": 31.3,
+      "step_conv_pct": 59.6,
+      "step_dropoff_pct": 40.4
+    },
+    {
+      "step_no": 6,
+      "event_name": "payment_success",
+      "sessions": 71292,
+      "pct_of_top": 20.8,
+      "step_conv_pct": 66.5,
+      "step_dropoff_pct": 33.5
+    }
+  ],
+  "funnel_by_platform": [
+    {
+      "platform": "Android",
+      "step_no": 1,
+      "event_name": "app_open",
+      "sessions": 260952,
+      "step_conv_pct": NaN
+    },
+    {
+      "platform": "Android",
+      "step_no": 2,
+      "event_name": "search",
+      "sessions": 224916,
+      "step_conv_pct": 86.2
+    },
+    {
+      "platform": "Android",
+      "step_no": 3,
+      "event_name": "restaurant_view",
+      "sessions": 187802,
+      "step_conv_pct": 83.5
+    },
+    {
+      "platform": "Android",
+      "step_no": 4,
+      "event_name": "add_to_cart",
+      "sessions": 136879,
+      "step_conv_pct": 72.9
+    },
+    {
+      "platform": "Android",
+      "step_no": 5,
+      "event_name": "checkout_start",
+      "sessions": 81601,
+      "step_conv_pct": 59.6
+    },
+    {
+      "platform": "Android",
+      "step_no": 6,
+      "event_name": "payment_success",
+      "sessions": 50613,
+      "step_conv_pct": 62.0
+    },
+    {
+      "platform": "iOS",
+      "step_no": 1,
+      "event_name": "app_open",
+      "sessions": 81621,
+      "step_conv_pct": NaN
+    },
+    {
+      "platform": "iOS",
+      "step_no": 2,
+      "event_name": "search",
+      "sessions": 70360,
+      "step_conv_pct": 86.2
+    },
+    {
+      "platform": "iOS",
+      "step_no": 3,
+      "event_name": "restaurant_view",
+      "sessions": 58672,
+      "step_conv_pct": 83.4
+    },
+    {
+      "platform": "iOS",
+      "step_no": 4,
+      "event_name": "add_to_cart",
+      "sessions": 42761,
+      "step_conv_pct": 72.9
+    },
+    {
+      "platform": "iOS",
+      "step_no": 5,
+      "event_name": "checkout_start",
+      "sessions": 25527,
+      "step_conv_pct": 59.7
+    },
+    {
+      "platform": "iOS",
+      "step_no": 6,
+      "event_name": "payment_success",
+      "sessions": 20679,
+      "step_conv_pct": 81.0
+    }
+  ],
+  "payment_leak": {
+    "android_pay_conv_pct": 62.0,
+    "ios_pay_conv_pct": 81.0,
+    "recoverable_orders_6mo": 15491.0
+  },
+  "rfm_summary": [
+    {
+      "segment": "Champions",
+      "users": 7551,
+      "pct_users": 18.7,
+      "gmv_lakh": 115.4,
+      "pct_gmv": 36.9,
+      "avg_orders": 3.03,
+      "avg_lifetime_gmv": 1529.0,
+      "avg_recency_days": 20.0
+    },
+    {
+      "segment": "Loyal",
+      "users": 7929,
+      "pct_users": 19.6,
+      "gmv_lakh": 68.4,
+      "pct_gmv": 21.9,
+      "avg_orders": 1.91,
+      "avg_lifetime_gmv": 863.0,
+      "avg_recency_days": 46.0
+    },
+    {
+      "segment": "At Risk (was valuable)",
+      "users": 5100,
+      "pct_users": 12.6,
+      "gmv_lakh": 53.6,
+      "pct_gmv": 17.1,
+      "avg_orders": 2.39,
+      "avg_lifetime_gmv": 1051.0,
+      "avg_recency_days": 116.0
+    },
+    {
+      "segment": "Hibernating / Churned",
+      "users": 7403,
+      "pct_users": 18.3,
+      "gmv_lakh": 27.8,
+      "pct_gmv": 8.9,
+      "avg_orders": 1.0,
+      "avg_lifetime_gmv": 376.0,
+      "avg_recency_days": 125.0
+    },
+    {
+      "segment": "Needs Attention",
+      "users": 6697,
+      "pct_users": 16.6,
+      "gmv_lakh": 25.4,
+      "pct_gmv": 8.1,
+      "avg_orders": 1.0,
+      "avg_lifetime_gmv": 379.0,
+      "avg_recency_days": 97.0
+    },
+    {
+      "segment": "New / Promising",
+      "users": 5709,
+      "pct_users": 14.1,
+      "gmv_lakh": 22.1,
+      "pct_gmv": 7.1,
+      "avg_orders": 1.0,
+      "avg_lifetime_gmv": 387.0,
+      "avg_recency_days": 20.0
+    }
+  ],
+  "behaviour_by_channel": [
+    {
+      "acquisition_channel": "referral",
+      "ordering_users": 5858,
+      "repeat_rate_pct": 32.0,
+      "orders_per_user": 1.86,
+      "gmv_per_user": 848.0,
+      "discount_pct_of_gmv": 18.0
+    },
+    {
+      "acquisition_channel": "organic",
+      "ordering_users": 14343,
+      "repeat_rate_pct": 30.1,
+      "orders_per_user": 1.85,
+      "gmv_per_user": 851.0,
+      "discount_pct_of_gmv": 18.0
+    },
+    {
+      "acquisition_channel": "paid_search",
+      "ordering_users": 9292,
+      "repeat_rate_pct": 27.9,
+      "orders_per_user": 1.75,
+      "gmv_per_user": 790.0,
+      "discount_pct_of_gmv": 18.6
+    },
+    {
+      "acquisition_channel": "paid_social",
+      "ordering_users": 10896,
+      "repeat_rate_pct": 19.4,
+      "orders_per_user": 1.49,
+      "gmv_per_user": 620.0,
+      "discount_pct_of_gmv": 26.5
+    }
+  ],
+  "repeat_by_late": [
+    {
+      "first_delivery": "Late",
+      "users": 6999,
+      "repeat_30d_pct": 20.47
+    },
+    {
+      "first_delivery": "On time",
+      "users": 24728,
+      "repeat_30d_pct": 32.64
+    }
+  ],
+  "stratified": {
+    "cells_used": 69.0,
+    "users_covered": 30054.0,
+    "adjusted_gap_pp": 11.78,
+    "wtd_ontime_pct": 31.65,
+    "wtd_late_pct": 19.87
+  },
+  "dose_response": [
+    {
+      "lateness_bucket": "1. Early / on time",
+      "users": 7196,
+      "avg_first_rating": 4.52,
+      "repeat_30d_pct": 32.91
+    },
+    {
+      "lateness_bucket": "2. 0-10 min late",
+      "users": 17592,
+      "avg_first_rating": 4.27,
+      "repeat_30d_pct": 32.53
+    },
+    {
+      "lateness_bucket": "3. 10-20 min late",
+      "users": 6376,
+      "avg_first_rating": 3.82,
+      "repeat_30d_pct": 20.36
+    },
+    {
+      "lateness_bucket": "4. 20-30 min late",
+      "users": 536,
+      "avg_first_rating": 3.28,
+      "repeat_30d_pct": 20.9
+    },
+    {
+      "lateness_bucket": "5. 30+ min late",
+      "users": 27,
+      "avg_first_rating": 2.89,
+      "repeat_30d_pct": 11.11
+    }
+  ],
+  "repeat_by_segment": [
+    {
+      "dimension": "channel",
+      "value": "referral",
+      "users": 4587,
+      "repeat_pct": 35.49
+    },
+    {
+      "dimension": "channel",
+      "value": "organic",
+      "users": 11277,
+      "repeat_pct": 33.59
+    },
+    {
+      "dimension": "channel",
+      "value": "paid_search",
+      "users": 7290,
+      "repeat_pct": 30.66
+    },
+    {
+      "dimension": "channel",
+      "value": "paid_social",
+      "users": 8573,
+      "repeat_pct": 21.6
+    },
+    {
+      "dimension": "city",
+      "value": "Hyderabad",
+      "users": 4355,
+      "repeat_pct": 31.3
+    },
+    {
+      "dimension": "city",
+      "value": "Mumbai",
+      "users": 5783,
+      "repeat_pct": 30.75
+    },
+    {
+      "dimension": "city",
+      "value": "Kolkata",
+      "users": 2908,
+      "repeat_pct": 30.57
+    },
+    {
+      "dimension": "city",
+      "value": "Pune",
+      "users": 3424,
+      "repeat_pct": 30.49
+    },
+    {
+      "dimension": "city",
+      "value": "Delhi NCR",
+      "users": 6898,
+      "repeat_pct": 29.62
+    },
+    {
+      "dimension": "city",
+      "value": "Bengaluru",
+      "users": 8359,
+      "repeat_pct": 28.54
+    },
+    {
+      "dimension": "first_rating",
+      "value": "4.5-5.0",
+      "users": 15780,
+      "repeat_pct": 33.9
+    },
+    {
+      "dimension": "first_rating",
+      "value": "3.5-4.0",
+      "users": 14651,
+      "repeat_pct": 26.38
+    },
+    {
+      "dimension": "first_rating",
+      "value": "<3.5",
+      "users": 1296,
+      "repeat_pct": 22.3
+    },
+    {
+      "dimension": "gold",
+      "value": "Gold member",
+      "users": 5086,
+      "repeat_pct": 48.21
+    },
+    {
+      "dimension": "gold",
+      "value": "Non-member",
+      "users": 26641,
+      "repeat_pct": 26.47
+    },
+    {
+      "dimension": "platform",
+      "value": "iOS",
+      "users": 8997,
+      "repeat_pct": 30.95
+    },
+    {
+      "dimension": "platform",
+      "value": "Android",
+      "users": 22730,
+      "repeat_pct": 29.56
+    }
+  ],
+  "raw_gap_pp": 12.17,
+  "late_gap_pvalue": 0.0,
+  "late_by_city_hour": [
+    {
+      "city": "Bengaluru",
+      "daypart": "Dinner peak",
+      "orders": 9652,
+      "late_rate_pct": 38.0,
+      "avg_minutes": 40.5
+    },
+    {
+      "city": "Bengaluru",
+      "daypart": "Lunch peak",
+      "orders": 4904,
+      "late_rate_pct": 36.9,
+      "avg_minutes": 40.3
+    },
+    {
+      "city": "Delhi NCR",
+      "daypart": "Dinner peak",
+      "orders": 7998,
+      "late_rate_pct": 24.9,
+      "avg_minutes": 38.2
+    },
+    {
+      "city": "Delhi NCR",
+      "daypart": "Lunch peak",
+      "orders": 4082,
+      "late_rate_pct": 24.7,
+      "avg_minutes": 38.2
+    },
+    {
+      "city": "Mumbai",
+      "daypart": "Dinner peak",
+      "orders": 6809,
+      "late_rate_pct": 20.7,
+      "avg_minutes": 37.2
+    },
+    {
+      "city": "Mumbai",
+      "daypart": "Lunch peak",
+      "orders": 3517,
+      "late_rate_pct": 20.6,
+      "avg_minutes": 37.3
+    },
+    {
+      "city": "Hyderabad",
+      "daypart": "Lunch peak",
+      "orders": 2586,
+      "late_rate_pct": 17.9,
+      "avg_minutes": 36.4
+    },
+    {
+      "city": "Pune",
+      "daypart": "Dinner peak",
+      "orders": 3999,
+      "late_rate_pct": 17.0,
+      "avg_minutes": 36.4
+    },
+    {
+      "city": "Hyderabad",
+      "daypart": "Dinner peak",
+      "orders": 5199,
+      "late_rate_pct": 16.6,
+      "avg_minutes": 36.2
+    },
+    {
+      "city": "Pune",
+      "daypart": "Lunch peak",
+      "orders": 2032,
+      "late_rate_pct": 16.3,
+      "avg_minutes": 36.4
+    },
+    {
+      "city": "Kolkata",
+      "daypart": "Lunch peak",
+      "orders": 1812,
+      "late_rate_pct": 15.2,
+      "avg_minutes": 36.0
+    },
+    {
+      "city": "Kolkata",
+      "daypart": "Dinner peak",
+      "orders": 3389,
+      "late_rate_pct": 14.2,
+      "avg_minutes": 35.8
+    },
+    {
+      "city": "Bengaluru",
+      "daypart": "Off peak",
+      "orders": 3586,
+      "late_rate_pct": 9.9,
+      "avg_minutes": 34.5
+    },
+    {
+      "city": "Delhi NCR",
+      "daypart": "Off peak",
+      "orders": 2975,
+      "late_rate_pct": 5.9,
+      "avg_minutes": 32.3
+    },
+    {
+      "city": "Mumbai",
+      "daypart": "Off peak",
+      "orders": 2619,
+      "late_rate_pct": 4.0,
+      "avg_minutes": 31.2
+    },
+    {
+      "city": "Pune",
+      "daypart": "Off peak",
+      "orders": 1555,
+      "late_rate_pct": 4.0,
+      "avg_minutes": 30.4
+    },
+    {
+      "city": "Hyderabad",
+      "daypart": "Off peak",
+      "orders": 2019,
+      "late_rate_pct": 3.7,
+      "avg_minutes": 30.4
+    },
+    {
+      "city": "Kolkata",
+      "daypart": "Off peak",
+      "orders": 1272,
+      "late_rate_pct": 2.9,
+      "avg_minutes": 29.9
+    }
+  ],
+  "ab_srm": [
+    {
+      "variant": "control",
+      "users": 9681,
+      "pct": 50.16
+    },
+    {
+      "variant": "treatment",
+      "users": 9620,
+      "pct": 49.84
+    }
+  ],
+  "ab_balance": [
+    {
+      "variant": "control",
+      "users": 9681,
+      "first_order_aov": 396.9,
+      "first_late_pct": 22.26,
+      "first_rating": 4.214
+    },
+    {
+      "variant": "treatment",
+      "users": 9620,
+      "first_order_aov": 399.2,
+      "first_late_pct": 21.92,
+      "first_rating": 4.213
+    }
+  ],
+  "ab_primary": [
+    {
+      "variant": "control",
+      "n": 9681,
+      "conversions": 1838,
+      "repeat_14d_pct": 18.986
+    },
+    {
+      "variant": "treatment",
+      "n": 9620,
+      "conversions": 2143,
+      "repeat_14d_pct": 22.277
+    }
+  ],
+  "ab_guardrails": [
+    {
+      "variant": "control",
+      "n": 9681,
+      "second_order_aov": 431.2,
+      "second_cancel_pct": 2.56,
+      "total_coupon_cost": 0.0
+    },
+    {
+      "variant": "treatment",
+      "n": 9620,
+      "second_order_aov": 404.9,
+      "second_cancel_pct": 1.87,
+      "total_coupon_cost": 160725.0
+    }
+  ],
+  "ab_by_segment": [
+    {
+      "segment": "First delivery LATE",
+      "variant": "control",
+      "n": 2155,
+      "conversions": 282,
+      "repeat_14d_pct": 13.09
+    },
+    {
+      "segment": "First delivery LATE",
+      "variant": "treatment",
+      "n": 2109,
+      "conversions": 319,
+      "repeat_14d_pct": 15.13
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "variant": "control",
+      "n": 7526,
+      "conversions": 1556,
+      "repeat_14d_pct": 20.67
+    },
+    {
+      "segment": "First delivery ON TIME",
+      "variant": "treatment",
+      "n": 7511,
+      "conversions": 1824,
+      "repeat_14d_pct": 24.28
+    }
+  ],
+  "ab_stats": {
+    "control_n": 9681,
+    "treatment_n": 9620,
+    "control_rate_pct": 18.986,
+    "treatment_rate_pct": 22.277,
+    "se_control_pct": 0.399,
+    "se_treatment_pct": 0.424,
+    "abs_lift_pp": 3.291,
+    "rel_lift_pct": 17.33,
+    "ci_low_pp": 2.15,
+    "ci_high_pp": 4.432,
+    "z_stat": 5.65,
+    "p_value": 1.6076702857859004e-08,
+    "p_value_str": "< 0.0001",
+    "significant_at_5pct": true,
+    "planned_mde_pp": 2.0,
+    "required_n_per_arm": 6275,
+    "actual_min_n_per_arm": 9620,
+    "powered": true
+  },
+  "ab_srm_pvalue": 0.6606062996715405,
+  "impact": {
+    "aov_used": 447,
+    "orders_per_retained_user_measured": 2.72,
+    "android_recoverable_orders_6mo": 15491,
+    "android_fix_gmv_lakh_yr": 69.2,
+    "adjusted_lateness_gap_pp": 11.78,
+    "lateness_late_rate_reduction_assumed_pp": 6.0,
+    "lateness_worst_cells": [
+      {
+        "city": "Bengaluru",
+        "daypart": "Dinner peak",
+        "late_rate_pct": 38.0
+      },
+      {
+        "city": "Bengaluru",
+        "daypart": "Lunch peak",
+        "late_rate_pct": 36.9
+      }
+    ],
+    "lateness_fix_users_saved_yr": 448,
+    "lateness_fix_gmv_lakh_yr": 5.5,
+    "nudge_incremental_users_yr": 2088,
+    "nudge_gross_gmv_lakh_yr": 25.4,
+    "nudge_coupon_cost_lakh_yr": 10.6,
+    "nudge_aov_guardrail_cost_lakh_yr": 3.7,
+    "nudge_aov_delta_rupees": 26.3,
+    "nudge_net_gmv_lakh_yr": 11.1,
+    "total_gmv_lakh_yr": 85.8
+  }
+}

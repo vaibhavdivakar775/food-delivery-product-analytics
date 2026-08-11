@@ -1,0 +1,15 @@
+# Core analysis — everything except streamlit is needed to reproduce the results.
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+
+# Notebook build (only needed for `python3 src/build_notebook.py`)
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6.25
+
+# Dashboard (only needed for `streamlit run dashboard/app.py`)
+streamlit>=1.30
+
+# SQLite ships with Python — no database server required.

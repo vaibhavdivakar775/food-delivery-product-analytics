@@ -1,0 +1,201 @@
+user_id,signup_date,city,platform,acquisition_channel,is_gold
+1,2026-05-28,Pune,Android,organic,0
+2,2026-04-03,Hyderabad,iOS,referral,0
+3,2026-06-10,Pune,iOS,paid_search,0
+4,2026-05-16,Kolkata,Android,referral,0
+5,2026-01-23,Mumbai,Android,paid_search,0
+6,2026-06-27,Hyderabad,iOS,paid_social,0
+7,2026-05-26,Mumbai,iOS,referral,1
+8,2026-05-30,Hyderabad,Android,referral,0
+9,2026-01-31,Mumbai,Android,paid_social,0
+10,2026-04-05,Hyderabad,Android,paid_social,0
+11,2026-03-21,Delhi NCR,iOS,organic,0
+12,2026-06-20,Hyderabad,Android,organic,0
+13,2026-05-08,Mumbai,Android,organic,0
+14,2026-06-05,Bengaluru,iOS,organic,0
+15,2026-04-04,Hyderabad,Android,referral,0
+16,2026-02-21,Delhi NCR,Android,paid_search,0
+17,2026-04-23,Mumbai,Android,paid_social,0
+18,2026-01-16,Mumbai,iOS,paid_social,0
+19,2026-06-05,Hyderabad,Android,organic,1
+20,2026-05-06,Hyderabad,iOS,referral,0
+21,2026-05-26,Delhi NCR,Android,paid_social,0
+22,2026-03-18,Mumbai,Android,paid_social,0
+23,2026-06-26,Pune,Android,organic,0
+24,2026-06-15,Bengaluru,Android,paid_search,0
+25,2026-05-29,Hyderabad,iOS,organic,0
+26,2026-02-14,Bengaluru,Android,organic,0
+27,2026-04-08,Delhi NCR,Android,paid_social,0
+28,2026-01-11,Bengaluru,iOS,organic,0
+29,2026-02-06,Hyderabad,iOS,organic,0
+30,2026-05-14,Bengaluru,Android,organic,0
+31,2026-05-24,Hyderabad,iOS,paid_social,1
+32,2026-06-26,Delhi NCR,iOS,paid_social,0
+33,2026-03-13,Delhi NCR,iOS,organic,0
+34,2026-03-21,Kolkata,Android,organic,1
+35,2026-04-08,Delhi NCR,iOS,paid_social,0
+36,2026-02-13,Bengaluru,Android,paid_search,0
+37,2026-01-31,Delhi NCR,Android,organic,0
+38,2026-04-09,Delhi NCR,iOS,organic,0
+39,2026-02-21,Hyderabad,iOS,organic,0
+40,2026-05-12,Bengaluru,Android,paid_social,0
+41,2026-04-03,Hyderabad,iOS,paid_social,0
+42,2026-06-06,Delhi NCR,iOS,referral,1
+43,2026-05-17,Hyderabad,Android,organic,0
+44,2026-03-10,Delhi NCR,Android,paid_search,0
+45,2026-06-06,Bengaluru,Android,paid_social,0
+46,2026-06-02,Hyderabad,Android,paid_social,0
+47,2026-03-25,Bengaluru,Android,paid_search,0
+48,2026-03-06,Delhi NCR,Android,paid_search,0
+49,2026-05-14,Pune,Android,paid_search,0
+50,2026-02-03,Kolkata,iOS,paid_search,0
+51,2026-02-16,Bengaluru,iOS,organic,1
+52,2026-01-02,Pune,Android,paid_social,0
+53,2026-05-30,Hyderabad,iOS,paid_social,0
+54,2026-05-11,Kolkata,Android,paid_social,0
+55,2026-05-18,Pune,Android,paid_social,0
+56,2026-05-29,Bengaluru,iOS,paid_search,1
+57,2026-04-07,Kolkata,Android,paid_search,0
+58,2026-04-25,Bengaluru,Android,organic,0
+59,2026-02-03,Delhi NCR,iOS,paid_social,0
+60,2026-01-28,Delhi NCR,iOS,paid_social,0
+61,2026-05-12,Mumbai,Android,paid_search,0
+62,2026-04-09,Bengaluru,iOS,paid_search,0
+63,2026-04-25,Bengaluru,Android,organic,0
+64,2026-05-27,Pune,iOS,paid_social,1
+65,2026-05-06,Mumbai,Android,organic,1
+66,2026-04-23,Delhi NCR,Android,paid_social,0
+67,2026-04-24,Hyderabad,Android,organic,0
+68,2026-03-09,Kolkata,Android,paid_social,0
+69,2026-01-08,Bengaluru,iOS,organic,0
+70,2026-04-03,Delhi NCR,iOS,paid_social,0
+71,2026-02-19,Kolkata,Android,organic,0
+72,2026-03-28,Mumbai,Android,referral,0
+73,2026-06-09,Delhi NCR,iOS,paid_social,0
+74,2026-02-23,Bengaluru,iOS,referral,0
+75,2026-01-15,Kolkata,Android,referral,0
+76,2026-03-04,Mumbai,Android,paid_search,0
+77,2026-03-07,Pune,Android,referral,0
+78,2026-05-11,Mumbai,Android,organic,0
+79,2026-04-24,Delhi NCR,iOS,paid_social,0
+80,2026-05-30,Pune,Android,organic,0
+81,2026-05-11,Delhi NCR,Android,organic,1
+82,2026-03-28,Hyderabad,iOS,paid_social,0
+83,2026-06-03,Delhi NCR,Android,paid_social,1
+84,2026-02-09,Pune,Android,paid_social,0
+85,2026-01-06,Mumbai,Android,organic,0
+86,2026-01-22,Delhi NCR,Android,organic,1
+87,2026-05-20,Hyderabad,Android,paid_social,1
+88,2026-04-07,Pune,Android,paid_social,0
+89,2026-02-07,Pune,Android,paid_social,0
+90,2026-04-14,Delhi NCR,Android,paid_social,0
+91,2026-02-05,Delhi NCR,Android,paid_search,0
+92,2026-05-16,Bengaluru,Android,organic,1
+93,2026-04-04,Bengaluru,iOS,referral,0
+94,2026-03-23,Kolkata,Android,paid_social,0
+95,2026-03-08,Hyderabad,iOS,paid_social,0
+96,2026-05-06,Mumbai,Android,referral,1
+97,2026-03-20,Mumbai,Android,paid_social,0
+98,2026-01-22,Bengaluru,Android,organic,0
+99,2026-01-29,Delhi NCR,Android,paid_search,0
+100,2026-06-25,Kolkata,iOS,paid_search,0
+101,2026-06-17,Delhi NCR,Android,paid_search,1
+102,2026-05-17,Mumbai,Android,organic,0
+103,2026-03-01,Delhi NCR,Android,paid_search,0
+104,2026-06-26,Bengaluru,Android,paid_search,0
+105,2026-05-29,Delhi NCR,Android,referral,0
+106,2026-05-20,Bengaluru,Android,referral,0
+107,2026-04-05,Mumbai,Android,paid_search,0
+108,2026-03-02,Kolkata,iOS,organic,1
+109,2026-01-24,Delhi NCR,Android,organic,0
+110,2026-06-17,Pune,iOS,paid_search,0
+111,2026-04-06,Bengaluru,iOS,organic,1
+112,2026-02-16,Mumbai,iOS,paid_search,0
+113,2026-03-09,Mumbai,iOS,organic,0
+114,2026-04-27,Delhi NCR,Android,paid_social,0
+115,2026-02-11,Bengaluru,Android,paid_social,0
+116,2026-06-10,Bengaluru,Android,paid_search,0
+117,2026-05-26,Bengaluru,iOS,paid_social,0
+118,2026-05-20,Pune,Android,paid_search,0
+119,2026-04-02,Bengaluru,Android,paid_social,0
+120,2026-05-05,Bengaluru,Android,organic,0
+121,2026-04-28,Hyderabad,iOS,paid_social,1
+122,2026-05-09,Delhi NCR,Android,referral,0
+123,2026-01-21,Delhi NCR,iOS,paid_social,0
+124,2026-03-30,Delhi NCR,Android,paid_search,0
+125,2026-01-11,Pune,Android,organic,0
+126,2026-04-13,Kolkata,Android,organic,1
+127,2026-03-14,Kolkata,Android,paid_social,0
+128,2026-02-04,Delhi NCR,Android,paid_search,0
+129,2026-01-25,Bengaluru,Android,paid_search,0
+130,2026-04-29,Pune,Android,organic,1
+131,2026-02-09,Pune,Android,referral,0
+132,2026-06-20,Delhi NCR,Android,referral,0
+133,2026-04-28,Mumbai,Android,paid_social,1
+134,2026-03-17,Delhi NCR,Android,paid_social,0
+135,2026-04-29,Bengaluru,Android,organic,0
+136,2026-01-06,Delhi NCR,Android,referral,0
+137,2026-06-25,Pune,Android,organic,0
+138,2026-04-11,Pune,Android,organic,0
+139,2026-05-30,Bengaluru,iOS,organic,0
+140,2026-01-21,Delhi NCR,Android,paid_search,0
+141,2026-04-11,Bengaluru,Android,paid_search,0
+142,2026-04-12,Delhi NCR,iOS,paid_social,0
+143,2026-06-22,Delhi NCR,Android,referral,0
+144,2026-04-26,Bengaluru,Android,referral,1
+145,2026-04-09,Pune,Android,referral,0
+146,2026-03-01,Pune,Android,paid_social,0
+147,2026-03-14,Kolkata,Android,organic,1
+148,2026-04-17,Hyderabad,Android,paid_search,0
+149,2026-04-03,Hyderabad,iOS,paid_social,0
+150,2026-01-06,Hyderabad,Android,referral,1
+151,2026-06-05,Hyderabad,Android,referral,0
+152,2026-06-16,Bengaluru,Android,paid_social,0
+153,2026-02-03,Bengaluru,Android,paid_social,0
+154,2026-04-23,Mumbai,Android,organic,0
+155,2026-01-27,Hyderabad,Android,paid_social,0
+156,2026-05-12,Bengaluru,Android,paid_social,0
+157,2026-03-04,Mumbai,Android,referral,1
+158,2026-05-10,Pune,iOS,referral,0
+159,2026-05-21,Bengaluru,Android,paid_search,0
+160,2026-05-28,Delhi NCR,iOS,organic,0
+161,2026-01-26,Kolkata,Android,referral,0
+162,2026-06-19,Delhi NCR,Android,paid_search,0
+163,2026-02-22,Bengaluru,Android,organic,0
+164,2026-01-10,Hyderabad,Android,paid_search,0
+165,2026-04-23,Kolkata,Android,organic,1
+166,2026-03-21,Bengaluru,Android,paid_search,0
+167,2026-06-06,Bengaluru,iOS,organic,0
+168,2026-06-03,Delhi NCR,iOS,organic,0
+169,2026-03-11,Mumbai,Android,organic,0
+170,2026-06-24,Pune,Android,organic,0
+171,2026-03-06,Kolkata,Android,paid_social,0
+172,2026-04-16,Pune,Android,referral,1
+173,2026-02-27,Delhi NCR,Android,organic,0
+174,2026-06-21,Hyderabad,Android,paid_social,1
+175,2026-02-08,Mumbai,iOS,organic,0
+176,2026-01-12,Mumbai,iOS,paid_social,1
+177,2026-04-02,Mumbai,Android,organic,0
+178,2026-06-29,Delhi NCR,Android,paid_social,0
+179,2026-06-15,Mumbai,Android,paid_search,0
+180,2026-05-24,Hyderabad,Android,paid_social,0
+181,2026-06-15,Bengaluru,Android,organic,0
+182,2026-06-15,Mumbai,iOS,organic,0
+183,2026-04-17,Bengaluru,Android,organic,0
+184,2026-03-11,Delhi NCR,iOS,paid_social,0
+185,2026-05-28,Delhi NCR,iOS,paid_social,0
+186,2026-05-11,Kolkata,Android,paid_social,0
+187,2026-03-22,Delhi NCR,iOS,referral,0
+188,2026-01-23,Pune,Android,paid_social,0
+189,2026-05-24,Delhi NCR,iOS,organic,1
+190,2026-02-28,Bengaluru,Android,referral,0
+191,2026-06-22,Delhi NCR,iOS,referral,0
+192,2026-02-24,Bengaluru,Android,paid_search,0
+193,2026-01-30,Pune,Android,referral,0
+194,2026-06-06,Mumbai,Android,paid_search,0
+195,2026-02-06,Hyderabad,iOS,paid_social,0
+196,2026-02-11,Hyderabad,iOS,organic,0
+197,2026-05-01,Delhi NCR,Android,paid_search,0
+198,2026-06-12,Delhi NCR,iOS,organic,0
+199,2026-02-15,Bengaluru,Android,organic,0
+200,2026-03-10,Hyderabad,iOS,organic,0

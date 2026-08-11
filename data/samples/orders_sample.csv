@@ -1,0 +1,201 @@
+order_id,user_id,order_ts,order_seq,city,platform,cuisine,gmv,discount,delivery_fee,promised_minutes,delivery_minutes,is_late,rating,status
+1,1,2026-06-04 21:16:00,1,Pune,Android,South Indian,588.0,135.0,35,32.0,40.5,0,4.5,delivered
+2,2,2026-04-03 17:35:00,1,Hyderabad,iOS,Burgers,502.0,158.0,0,32.0,23.2,0,5.0,delivered
+3,2,2026-04-12 12:17:00,2,Hyderabad,iOS,North Indian,579.0,25.0,25,32.0,30.6,0,4.0,delivered
+4,2,2026-04-13 12:54:00,3,Hyderabad,iOS,Biryani,445.0,63.0,45,32.0,31.3,0,5.0,delivered
+5,3,2026-06-10 12:12:00,1,Pune,iOS,South Indian,328.0,101.0,25,32.0,26.6,0,4.0,delivered
+6,4,2026-05-16 11:36:00,1,Kolkata,Android,North Indian,120.0,20.0,25,32.0,30.2,0,3.5,delivered
+7,5,2026-01-28 21:51:00,1,Mumbai,Android,North Indian,515.0,129.0,45,32.0,42.3,1,5.0,delivered
+8,9,2026-01-31 12:19:00,1,Mumbai,Android,North Indian,281.0,94.0,45,32.0,28.8,0,5.0,delivered
+9,11,2026-03-24 20:44:00,1,Delhi NCR,iOS,Chinese,475.0,140.0,25,32.0,40.0,0,4.5,delivered
+10,12,2026-06-22 21:52:00,1,Hyderabad,Android,South Indian,198.0,52.0,35,32.0,33.8,0,5.0,delivered
+11,13,2026-05-12 19:58:00,1,Mumbai,Android,Biryani,469.0,111.0,45,32.0,40.6,0,4.0,delivered
+12,14,2026-06-07 14:34:00,1,Bengaluru,iOS,Chinese,150.0,41.0,25,32.0,28.5,0,4.5,delivered
+13,14,2026-06-27 12:05:00,2,Bengaluru,iOS,North Indian,553.0,49.0,45,32.0,41.6,0,4.5,delivered
+14,15,2026-04-05 21:22:00,1,Hyderabad,Android,Burgers,478.0,130.0,25,32.0,33.5,0,5.0,delivered
+15,18,2026-01-16 21:53:00,1,Mumbai,iOS,Biryani,490.0,153.0,45,32.0,36.7,0,4.0,delivered
+16,18,2026-01-21 12:11:00,2,Mumbai,iOS,South Indian,314.0,42.0,35,32.0,28.7,0,5.0,delivered
+17,18,2026-01-31 13:48:00,3,Mumbai,iOS,Pizza,386.0,55.0,25,32.0,41.0,0,4.0,delivered
+18,19,2026-06-08 19:47:00,1,Hyderabad,Android,Biryani,381.0,102.0,0,32.0,33.6,0,5.0,delivered
+19,20,2026-05-06 22:12:00,1,Hyderabad,iOS,Chinese,120.0,28.0,45,32.0,25.4,0,4.0,delivered
+20,23,2026-06-26 12:46:00,1,Pune,Android,North Indian,373.0,100.0,25,32.0,35.4,0,4.5,delivered
+21,24,2026-06-17 20:56:00,1,Bengaluru,Android,North Indian,256.0,91.0,35,32.0,37.3,0,4.5,delivered
+22,25,2026-05-30 19:57:00,1,Hyderabad,iOS,Pizza,626.0,157.0,25,32.0,29.0,0,4.5,delivered
+23,25,2026-06-06 13:24:00,2,Hyderabad,iOS,Chinese,524.0,70.0,25,32.0,42.9,1,5.0,delivered
+24,25,2026-06-09 12:31:00,3,Hyderabad,iOS,Biryani,665.0,79.0,25,32.0,41.6,0,4.5,delivered
+25,26,2026-02-14 20:35:00,1,Bengaluru,Android,North Indian,306.0,79.0,0,32.0,39.2,0,4.5,delivered
+26,26,2026-03-07 17:33:00,2,Bengaluru,Android,Healthy,369.0,29.0,35,32.0,36.5,0,4.0,delivered
+27,26,2026-03-28 19:19:00,3,Bengaluru,Android,South Indian,383.0,18.0,0,32.0,34.3,0,4.0,delivered
+28,28,2026-01-18 11:18:00,1,Bengaluru,iOS,South Indian,381.0,121.0,25,32.0,45.3,1,4.0,delivered
+29,30,2026-05-21 14:31:00,1,Bengaluru,Android,Pizza,292.0,88.0,35,32.0,49.1,1,3.5,delivered
+30,32,2026-06-30 21:58:00,1,Delhi NCR,iOS,North Indian,360.0,136.0,45,32.0,30.8,0,4.5,delivered
+31,34,2026-03-29 20:01:00,1,Kolkata,Android,North Indian,309.0,87.0,0,32.0,32.2,0,5.0,delivered
+32,36,2026-02-19 20:46:00,1,Bengaluru,Android,Pizza,516.0,155.0,25,32.0,39.3,0,3.5,delivered
+33,38,2026-04-09 20:10:00,1,Delhi NCR,iOS,Chinese,365.0,112.0,25,32.0,22.9,0,5.0,delivered
+34,38,2026-04-28 20:35:00,2,Delhi NCR,iOS,Biryani,399.0,46.0,35,32.0,41.3,0,4.0,delivered
+35,38,2026-06-14 19:51:00,3,Delhi NCR,iOS,North Indian,738.0,102.0,35,32.0,35.2,0,4.5,cancelled
+36,41,2026-04-03 13:22:00,1,Hyderabad,iOS,North Indian,516.0,179.0,35,32.0,42.0,1,4.5,delivered
+37,41,2026-04-09 21:03:00,2,Hyderabad,iOS,South Indian,327.0,16.0,35,32.0,28.4,0,4.5,delivered
+38,42,2026-06-06 19:44:00,1,Delhi NCR,iOS,North Indian,427.0,125.0,0,32.0,32.9,0,4.5,delivered
+39,43,2026-05-17 11:28:00,1,Hyderabad,Android,Healthy,256.0,74.0,25,32.0,29.8,0,4.5,delivered
+40,45,2026-06-06 18:58:00,1,Bengaluru,Android,Chinese,266.0,109.0,25,32.0,35.5,0,4.5,delivered
+41,46,2026-06-04 19:22:00,1,Hyderabad,Android,Biryani,120.0,45.0,25,32.0,40.8,0,5.0,delivered
+42,48,2026-03-10 14:10:00,1,Delhi NCR,Android,Chinese,410.0,149.0,35,32.0,43.9,1,3.5,delivered
+43,50,2026-02-08 11:26:00,1,Kolkata,iOS,South Indian,312.0,89.0,45,32.0,36.3,0,5.0,delivered
+44,54,2026-05-13 20:50:00,1,Kolkata,Android,North Indian,291.0,100.0,0,32.0,35.8,0,4.0,delivered
+45,55,2026-05-18 21:55:00,1,Pune,Android,South Indian,447.0,137.0,45,32.0,47.4,1,4.0,delivered
+46,57,2026-04-07 18:51:00,1,Kolkata,Android,Biryani,397.0,93.0,45,32.0,22.9,0,5.0,delivered
+47,58,2026-04-25 14:37:00,1,Bengaluru,Android,Chinese,398.0,117.0,45,32.0,40.2,0,3.5,delivered
+48,59,2026-02-06 21:58:00,1,Delhi NCR,iOS,Burgers,435.0,145.0,35,32.0,49.9,1,4.0,delivered
+49,60,2026-01-28 19:07:00,1,Delhi NCR,iOS,Chinese,307.0,116.0,45,32.0,36.4,0,3.5,delivered
+50,61,2026-05-19 15:34:00,1,Mumbai,Android,Biryani,392.0,111.0,25,32.0,29.5,0,5.0,delivered
+51,62,2026-04-09 12:24:00,1,Bengaluru,iOS,Pizza,333.0,101.0,45,32.0,40.6,0,4.0,delivered
+52,64,2026-05-29 20:48:00,1,Pune,iOS,Chinese,621.0,303.0,0,32.0,31.2,0,4.5,delivered
+53,65,2026-05-08 13:22:00,1,Mumbai,Android,South Indian,452.0,127.0,0,32.0,48.5,1,4.5,delivered
+54,65,2026-06-06 13:21:00,2,Mumbai,Android,Burgers,613.0,23.0,0,32.0,36.7,0,4.0,delivered
+55,65,2026-06-16 20:28:00,3,Mumbai,Android,Biryani,480.0,29.0,0,32.0,37.5,0,3.0,delivered
+56,65,2026-06-25 14:45:00,4,Mumbai,Android,North Indian,356.0,30.0,0,32.0,35.6,0,4.0,delivered
+57,66,2026-04-23 11:34:00,1,Delhi NCR,Android,Burgers,311.0,127.0,25,32.0,37.0,0,5.0,delivered
+58,67,2026-04-30 19:22:00,1,Hyderabad,Android,Biryani,656.0,220.0,25,32.0,46.1,1,4.0,delivered
+59,67,2026-05-16 21:18:00,2,Hyderabad,Android,North Indian,507.0,6.0,35,32.0,30.6,0,5.0,delivered
+60,68,2026-03-09 19:10:00,1,Kolkata,Android,Burgers,411.0,180.0,0,32.0,46.1,1,3.5,delivered
+61,69,2026-01-09 20:21:00,1,Bengaluru,iOS,Pizza,317.0,85.0,35,32.0,37.3,0,4.5,delivered
+62,70,2026-04-08 21:20:00,1,Delhi NCR,iOS,Burgers,120.0,53.0,25,32.0,32.9,0,5.0,delivered
+63,72,2026-03-28 19:52:00,1,Mumbai,Android,Healthy,463.0,94.0,35,32.0,36.2,0,5.0,delivered
+64,73,2026-06-09 22:00:00,1,Delhi NCR,iOS,Chinese,311.0,143.0,45,32.0,38.5,0,4.0,delivered
+65,74,2026-02-24 21:22:00,1,Bengaluru,iOS,Biryani,411.0,111.0,0,32.0,39.1,0,4.0,delivered
+66,74,2026-03-04 20:47:00,2,Bengaluru,iOS,Burgers,600.0,58.0,25,32.0,32.3,0,5.0,delivered
+67,75,2026-01-16 13:22:00,1,Kolkata,Android,North Indian,344.0,144.0,0,32.0,45.8,1,3.5,delivered
+68,76,2026-03-05 20:30:00,1,Mumbai,Android,Chinese,339.0,79.0,25,32.0,42.6,1,4.0,delivered
+69,76,2026-03-25 15:59:00,2,Mumbai,Android,Desserts,254.0,25.0,35,32.0,22.3,0,4.5,delivered
+70,76,2026-03-31 13:40:00,3,Mumbai,Android,South Indian,432.0,9.0,0,32.0,30.8,0,5.0,delivered
+71,79,2026-04-26 19:04:00,1,Delhi NCR,iOS,Biryani,406.0,194.0,25,32.0,35.4,0,4.5,delivered
+72,81,2026-05-20 20:10:00,1,Delhi NCR,Android,Chinese,407.0,121.0,0,32.0,33.9,0,5.0,delivered
+73,81,2026-06-10 21:45:00,2,Delhi NCR,Android,Pizza,376.0,24.0,0,32.0,38.9,0,4.0,delivered
+74,83,2026-06-03 14:21:00,1,Delhi NCR,Android,South Indian,450.0,181.0,0,32.0,40.8,0,4.5,delivered
+75,84,2026-02-10 19:54:00,1,Pune,Android,North Indian,307.0,134.0,0,32.0,34.6,0,4.5,delivered
+76,86,2026-01-22 20:50:00,1,Delhi NCR,Android,Biryani,322.0,102.0,0,32.0,37.3,0,4.0,delivered
+77,87,2026-05-20 10:27:00,1,Hyderabad,Android,Chinese,274.0,110.0,0,32.0,25.4,0,5.0,delivered
+78,90,2026-04-14 14:06:00,1,Delhi NCR,Android,Chinese,584.0,217.0,35,32.0,37.8,0,3.5,delivered
+79,91,2026-02-06 19:46:00,1,Delhi NCR,Android,North Indian,223.0,74.0,35,32.0,37.5,0,4.5,delivered
+80,92,2026-05-16 13:16:00,1,Bengaluru,Android,Pizza,360.0,78.0,0,32.0,47.9,1,3.5,delivered
+81,95,2026-03-08 12:48:00,1,Hyderabad,iOS,Pizza,120.0,47.0,35,32.0,31.7,0,4.0,delivered
+82,96,2026-05-11 19:44:00,1,Mumbai,Android,Healthy,349.0,107.0,0,32.0,42.4,1,4.0,delivered
+83,96,2026-06-05 19:54:00,2,Mumbai,Android,North Indian,408.0,26.0,0,32.0,36.1,0,4.0,delivered
+84,96,2026-06-08 19:08:00,3,Mumbai,Android,North Indian,499.0,63.0,0,32.0,37.1,0,3.5,delivered
+85,97,2026-03-20 14:25:00,1,Mumbai,Android,Chinese,264.0,98.0,0,32.0,30.8,0,4.5,delivered
+86,98,2026-01-25 19:13:00,1,Bengaluru,Android,Biryani,196.0,59.0,0,32.0,41.7,0,3.5,delivered
+87,99,2026-02-02 12:46:00,1,Delhi NCR,Android,Biryani,261.0,89.0,25,32.0,36.6,0,4.5,delivered
+88,100,2026-06-25 20:06:00,1,Kolkata,iOS,Desserts,304.0,88.0,25,32.0,31.3,0,4.5,delivered
+89,101,2026-06-17 13:34:00,1,Delhi NCR,Android,South Indian,385.0,114.0,0,32.0,51.9,1,4.0,delivered
+90,102,2026-05-17 22:48:00,1,Mumbai,Android,Chinese,366.0,104.0,35,32.0,34.3,0,5.0,delivered
+91,102,2026-05-19 22:45:00,2,Mumbai,Android,Healthy,459.0,57.0,45,32.0,39.8,0,4.5,delivered
+92,102,2026-06-06 23:12:00,3,Mumbai,Android,Chinese,478.0,69.0,25,32.0,29.7,0,5.0,delivered
+93,103,2026-03-03 20:20:00,1,Delhi NCR,Android,Pizza,453.0,116.0,35,32.0,41.2,0,5.0,delivered
+94,104,2026-06-26 11:20:00,1,Bengaluru,Android,North Indian,155.0,38.0,25,32.0,33.7,0,5.0,delivered
+95,106,2026-05-21 18:27:00,1,Bengaluru,Android,Biryani,425.0,128.0,25,32.0,29.9,0,5.0,cancelled
+96,107,2026-04-10 19:06:00,1,Mumbai,Android,Biryani,173.0,50.0,25,32.0,44.5,1,4.0,delivered
+97,108,2026-03-04 20:06:00,1,Kolkata,iOS,Chinese,391.0,99.0,0,32.0,35.0,0,4.0,cancelled
+98,109,2026-01-26 12:28:00,1,Delhi NCR,Android,Burgers,273.0,69.0,45,32.0,41.9,0,3.5,delivered
+99,110,2026-06-17 15:00:00,1,Pune,iOS,South Indian,551.0,153.0,25,32.0,31.4,0,5.0,delivered
+100,113,2026-03-09 13:31:00,1,Mumbai,iOS,South Indian,328.0,81.0,25,32.0,31.7,0,5.0,delivered
+101,114,2026-04-29 12:29:00,1,Delhi NCR,Android,Pizza,160.0,59.0,25,32.0,36.0,0,4.0,cancelled
+102,115,2026-02-16 19:52:00,1,Bengaluru,Android,Chinese,692.0,237.0,25,32.0,38.4,0,4.0,delivered
+103,116,2026-06-10 19:22:00,1,Bengaluru,Android,North Indian,462.0,127.0,0,32.0,42.2,1,3.5,delivered
+104,117,2026-05-26 21:14:00,1,Bengaluru,iOS,Chinese,456.0,202.0,45,32.0,30.1,0,5.0,delivered
+105,120,2026-05-14 20:13:00,1,Bengaluru,Android,North Indian,525.0,181.0,35,32.0,41.2,0,4.5,delivered
+106,121,2026-04-30 22:00:00,1,Hyderabad,iOS,Chinese,460.0,179.0,0,32.0,31.0,0,5.0,delivered
+107,121,2026-05-26 20:51:00,2,Hyderabad,iOS,North Indian,411.0,35.0,0,32.0,35.5,0,4.0,delivered
+108,121,2026-06-20 11:47:00,3,Hyderabad,iOS,Biryani,446.0,54.0,0,32.0,21.7,0,4.0,delivered
+109,122,2026-05-12 11:15:00,1,Delhi NCR,Android,North Indian,199.0,40.0,35,32.0,10.4,0,4.5,delivered
+110,124,2026-04-05 13:03:00,1,Delhi NCR,Android,Chinese,340.0,116.0,0,32.0,37.6,0,4.5,delivered
+111,124,2026-05-02 20:13:00,2,Delhi NCR,Android,North Indian,301.0,21.0,25,32.0,37.0,0,4.0,delivered
+112,124,2026-05-03 20:58:00,3,Delhi NCR,Android,North Indian,369.0,10.0,0,32.0,32.6,0,4.0,delivered
+113,126,2026-04-19 20:16:00,1,Kolkata,Android,Biryani,423.0,137.0,0,32.0,38.5,0,4.0,delivered
+114,126,2026-05-04 20:14:00,2,Kolkata,Android,Biryani,754.0,76.0,0,32.0,34.4,0,5.0,delivered
+115,126,2026-05-08 10:14:00,3,Kolkata,Android,North Indian,598.0,33.0,0,32.0,23.6,0,4.5,delivered
+116,126,2026-05-23 19:22:00,4,Kolkata,Android,Biryani,489.0,34.0,0,32.0,30.3,0,5.0,delivered
+117,127,2026-03-14 19:11:00,1,Kolkata,Android,Chinese,341.0,133.0,0,32.0,46.1,1,4.0,delivered
+118,127,2026-03-31 13:40:00,2,Kolkata,Android,Pizza,527.0,49.0,0,32.0,28.4,0,4.0,delivered
+119,128,2026-02-04 20:58:00,1,Delhi NCR,Android,South Indian,349.0,103.0,45,32.0,29.1,0,4.5,delivered
+120,129,2026-01-26 20:35:00,1,Bengaluru,Android,Biryani,280.0,91.0,25,32.0,42.9,1,4.0,delivered
+121,130,2026-05-02 13:17:00,1,Pune,Android,Pizza,468.0,103.0,0,32.0,36.0,0,4.0,delivered
+122,130,2026-05-31 12:32:00,2,Pune,Android,Biryani,169.0,14.0,0,32.0,32.2,0,4.5,delivered
+123,130,2026-06-08 18:36:00,3,Pune,Android,North Indian,439.0,40.0,0,32.0,25.4,0,4.0,delivered
+124,130,2026-06-10 08:02:00,4,Pune,Android,Chinese,382.0,52.0,0,32.0,19.2,0,3.5,delivered
+125,130,2026-06-27 19:54:00,5,Pune,Android,Biryani,703.0,77.0,0,32.0,37.8,0,4.5,delivered
+126,131,2026-02-11 19:58:00,1,Pune,Android,Biryani,122.0,32.0,25,32.0,40.3,0,4.0,delivered
+127,131,2026-03-13 20:28:00,2,Pune,Android,Biryani,335.0,29.0,0,32.0,27.6,0,4.5,delivered
+128,133,2026-04-30 12:54:00,1,Mumbai,Android,Chinese,580.0,221.0,0,32.0,37.2,0,4.0,delivered
+129,134,2026-03-17 18:27:00,1,Delhi NCR,Android,South Indian,120.0,47.0,25,32.0,32.7,0,5.0,delivered
+130,135,2026-04-29 12:45:00,1,Bengaluru,Android,Chinese,775.0,160.0,0,32.0,49.1,1,4.0,delivered
+131,136,2026-01-07 19:03:00,1,Delhi NCR,Android,Pizza,330.0,86.0,35,32.0,33.1,0,4.5,delivered
+132,137,2026-06-25 21:55:00,1,Pune,Android,Burgers,423.0,165.0,0,32.0,44.8,1,3.5,delivered
+133,139,2026-06-01 17:23:00,1,Bengaluru,iOS,Chinese,389.0,141.0,25,32.0,30.9,0,5.0,delivered
+134,140,2026-01-21 19:47:00,1,Delhi NCR,Android,Chinese,640.0,127.0,25,32.0,32.8,0,3.0,cancelled
+135,140,2026-02-04 21:09:00,2,Delhi NCR,Android,Chinese,441.0,37.0,35,32.0,40.4,0,4.0,delivered
+136,141,2026-04-11 19:57:00,1,Bengaluru,Android,North Indian,476.0,119.0,25,32.0,41.4,0,4.5,delivered
+137,141,2026-04-26 17:19:00,2,Bengaluru,Android,Desserts,232.0,18.0,45,32.0,29.9,0,4.0,delivered
+138,142,2026-04-21 21:26:00,1,Delhi NCR,iOS,North Indian,265.0,92.0,45,32.0,39.4,0,3.5,delivered
+139,143,2026-06-28 17:58:00,1,Delhi NCR,Android,Chinese,602.0,165.0,35,32.0,35.6,0,4.5,delivered
+140,144,2026-04-28 19:51:00,1,Bengaluru,Android,Desserts,349.0,69.0,0,32.0,36.3,0,4.0,delivered
+141,145,2026-04-14 10:26:00,1,Pune,Android,North Indian,430.0,144.0,35,32.0,31.7,0,5.0,delivered
+142,145,2026-04-17 20:41:00,2,Pune,Android,Pizza,515.0,65.0,25,32.0,34.7,0,4.5,delivered
+143,145,2026-04-27 18:29:00,3,Pune,Android,Burgers,645.0,19.0,35,32.0,29.0,0,3.5,delivered
+144,145,2026-05-18 20:45:00,4,Pune,Android,South Indian,562.0,6.0,25,32.0,38.8,0,4.0,delivered
+145,145,2026-05-25 21:19:00,5,Pune,Android,Chinese,700.0,60.0,35,32.0,37.2,0,4.5,delivered
+146,147,2026-03-14 09:31:00,1,Kolkata,Android,South Indian,323.0,82.0,0,32.0,25.1,0,4.0,delivered
+147,147,2026-03-18 20:24:00,2,Kolkata,Android,Burgers,516.0,67.0,0,32.0,42.3,1,3.5,delivered
+148,147,2026-03-21 20:15:00,3,Kolkata,Android,North Indian,580.0,61.0,0,32.0,39.4,0,4.0,delivered
+149,147,2026-03-22 10:15:00,4,Kolkata,Android,Burgers,601.0,71.0,0,32.0,30.9,0,4.5,delivered
+150,148,2026-04-17 20:03:00,1,Hyderabad,Android,Biryani,618.0,125.0,35,32.0,29.0,0,4.5,delivered
+151,150,2026-01-06 20:01:00,1,Hyderabad,Android,South Indian,321.0,73.0,0,32.0,43.1,1,4.0,delivered
+152,152,2026-06-18 13:18:00,1,Bengaluru,Android,Desserts,580.0,191.0,45,32.0,38.6,0,4.5,delivered
+153,153,2026-02-06 13:15:00,1,Bengaluru,Android,South Indian,228.0,65.0,0,32.0,47.6,1,4.0,delivered
+154,154,2026-04-25 11:48:00,1,Mumbai,Android,North Indian,345.0,88.0,35,32.0,26.7,0,4.5,delivered
+155,155,2026-01-27 17:31:00,1,Hyderabad,Android,North Indian,648.0,236.0,25,32.0,36.2,0,4.0,delivered
+156,155,2026-02-01 22:53:00,2,Hyderabad,Android,North Indian,476.0,25.0,45,32.0,36.1,0,4.5,delivered
+157,155,2026-02-04 19:29:00,3,Hyderabad,Android,Burgers,495.0,29.0,45,32.0,42.6,1,4.0,cancelled
+158,155,2026-02-08 22:11:00,4,Hyderabad,Android,Healthy,627.0,38.0,35,32.0,32.9,0,4.5,delivered
+159,155,2026-02-11 20:40:00,5,Hyderabad,Android,Pizza,506.0,1.0,25,32.0,40.4,0,4.5,delivered
+160,155,2026-03-02 12:52:00,6,Hyderabad,Android,South Indian,658.0,66.0,35,32.0,32.6,0,5.0,delivered
+161,155,2026-03-10 20:26:00,7,Hyderabad,Android,Biryani,595.0,46.0,25,32.0,37.7,0,5.0,delivered
+162,155,2026-03-19 13:32:00,8,Hyderabad,Android,Burgers,303.0,14.0,0,32.0,41.7,0,3.5,delivered
+163,155,2026-03-21 22:04:00,9,Hyderabad,Android,Desserts,569.0,57.0,25,32.0,39.6,0,4.0,delivered
+164,155,2026-04-16 19:31:00,10,Hyderabad,Android,Burgers,630.0,13.0,35,32.0,44.0,1,3.0,delivered
+165,155,2026-05-11 21:16:00,11,Hyderabad,Android,Chinese,571.0,54.0,45,32.0,24.7,0,5.0,delivered
+166,156,2026-05-12 12:37:00,1,Bengaluru,Android,Pizza,120.0,53.0,0,32.0,36.9,0,3.5,delivered
+167,156,2026-05-16 12:09:00,2,Bengaluru,Android,Burgers,310.0,15.0,0,32.0,36.0,0,4.5,delivered
+168,163,2026-02-24 13:04:00,1,Bengaluru,Android,North Indian,309.0,80.0,35,32.0,48.4,1,3.0,delivered
+169,164,2026-01-15 21:15:00,1,Hyderabad,Android,Biryani,384.0,91.0,45,32.0,36.4,0,3.5,delivered
+170,165,2026-04-26 19:08:00,1,Kolkata,Android,South Indian,362.0,93.0,0,32.0,27.7,0,3.5,delivered
+171,165,2026-05-22 20:49:00,2,Kolkata,Android,Pizza,554.0,93.0,0,32.0,25.7,0,5.0,delivered
+172,166,2026-03-22 20:40:00,1,Bengaluru,Android,Chinese,260.0,71.0,25,32.0,37.9,0,5.0,delivered
+173,167,2026-06-07 12:53:00,1,Bengaluru,iOS,Pizza,360.0,94.0,45,32.0,33.9,0,4.0,delivered
+174,167,2026-06-24 20:34:00,2,Bengaluru,iOS,South Indian,520.0,63.0,25,32.0,43.4,1,3.5,delivered
+175,169,2026-03-16 20:12:00,1,Mumbai,Android,Chinese,481.0,137.0,25,32.0,37.4,0,3.5,delivered
+176,169,2026-04-13 21:31:00,2,Mumbai,Android,Biryani,582.0,32.0,25,32.0,44.1,1,4.0,delivered
+177,169,2026-04-21 19:57:00,3,Mumbai,Android,North Indian,392.0,42.0,35,32.0,37.6,0,3.5,delivered
+178,169,2026-04-22 13:53:00,4,Mumbai,Android,Pizza,289.0,12.0,25,32.0,29.1,0,4.0,delivered
+179,172,2026-04-23 20:54:00,1,Pune,Android,Desserts,643.0,202.0,0,32.0,40.8,0,4.5,delivered
+180,172,2026-05-12 11:37:00,2,Pune,Android,Biryani,613.0,64.0,0,32.0,29.7,0,4.0,delivered
+181,172,2026-06-02 11:50:00,3,Pune,Android,South Indian,520.0,27.0,0,32.0,32.9,0,4.5,delivered
+182,173,2026-03-01 19:22:00,1,Delhi NCR,Android,North Indian,386.0,93.0,25,32.0,34.0,0,4.5,delivered
+183,173,2026-03-23 12:41:00,2,Delhi NCR,Android,Pizza,191.0,15.0,0,32.0,38.2,0,3.0,delivered
+184,174,2026-06-21 16:56:00,1,Hyderabad,Android,Chinese,340.0,111.0,0,32.0,34.8,0,4.5,delivered
+185,175,2026-02-09 11:53:00,1,Mumbai,iOS,Biryani,216.0,50.0,35,32.0,38.0,0,4.0,delivered
+186,176,2026-01-12 13:28:00,1,Mumbai,iOS,North Indian,518.0,203.0,0,32.0,41.6,0,4.5,delivered
+187,176,2026-01-14 21:15:00,2,Mumbai,iOS,North Indian,601.0,47.0,0,32.0,53.3,1,3.5,delivered
+188,176,2026-01-19 14:10:00,3,Mumbai,iOS,Pizza,452.0,14.0,0,32.0,33.0,0,4.0,delivered
+189,176,2026-01-27 18:57:00,4,Mumbai,iOS,North Indian,447.0,10.0,0,32.0,31.9,0,4.0,delivered
+190,176,2026-02-04 19:46:00,5,Mumbai,iOS,Desserts,423.0,40.0,0,32.0,36.3,0,4.5,delivered
+191,176,2026-02-05 18:38:00,6,Mumbai,iOS,Pizza,433.0,45.0,0,32.0,17.9,0,4.0,delivered
+192,176,2026-02-13 19:43:00,7,Mumbai,iOS,Pizza,372.0,6.0,0,32.0,36.4,0,4.5,delivered
+193,176,2026-02-19 12:49:00,8,Mumbai,iOS,Pizza,598.0,40.0,0,32.0,29.3,0,4.0,delivered
+194,176,2026-03-08 12:29:00,9,Mumbai,iOS,Desserts,501.0,66.0,0,32.0,38.6,0,4.0,delivered
+195,176,2026-03-08 13:15:00,10,Mumbai,iOS,Chinese,392.0,23.0,0,32.0,31.2,0,3.0,delivered
+196,176,2026-03-24 20:59:00,11,Mumbai,iOS,Chinese,420.0,55.0,0,32.0,32.7,0,4.0,delivered
+197,176,2026-03-25 13:18:00,12,Mumbai,iOS,Burgers,618.0,48.0,0,32.0,32.2,0,5.0,delivered
+198,176,2026-05-30 13:51:00,13,Mumbai,iOS,Chinese,223.0,29.0,0,32.0,45.6,1,4.5,delivered
+199,177,2026-04-04 19:16:00,1,Mumbai,Android,Burgers,347.0,106.0,25,32.0,33.2,0,4.0,delivered
+200,178,2026-06-29 13:23:00,1,Delhi NCR,Android,Burgers,479.0,204.0,45,32.0,36.4,0,4.0,delivered
