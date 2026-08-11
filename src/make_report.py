@@ -39,7 +39,7 @@ def cr(x):          # ₹ crore
 # =====================================================================================
 def executive_summary() -> str:
     seg = pd.DataFrame(R["repeat_by_segment"])
-    gold = seg[(seg.dimension == "gold")].set_index("value")["repeat_pct"]
+    member = seg[(seg.dimension == "member")].set_index("value")["repeat_pct"]
     ch = seg[(seg.dimension == "channel")].set_index("value")["repeat_pct"]
     dose = pd.DataFrame(R["dose_response"])
     hte = pd.DataFrame(R["ab_by_segment"])
@@ -79,7 +79,7 @@ the business problem: not traffic, not supply — **the second order**.
 **Finding 1 — A late first delivery is the single largest killer of the second order.**
 Users whose first order arrived >10 min past the promised ETA repeat at
 **{late_pct:.1f}%** vs **{ontime_pct:.1f}%** for on-time users — a **{R['raw_gap_pp']:.1f}pp** raw gap
-(p < 0.001). Held constant within {int(ST['cells_used'])} city × channel × Gold × platform cells covering
+(p < 0.001). Held constant within {int(ST['cells_used'])} city × channel × membership × platform cells covering
 {int(ST['users_covered']):,} users, the gap is still **{ST['adjusted_gap_pp']:.1f}pp**, and it shows a clean
 dose–response once the ETA is genuinely missed:
 {dose_txt}
@@ -97,8 +97,8 @@ the signature of a defect, not of user intent. At current volume that is
 
 **Finding 3 — We are buying the wrong users.**
 Paid-social users repeat at **{ch.get('paid_social'):.1f}%** vs **{ch.get('referral'):.1f}%** for referral, and
-consume the heaviest discounts. Gold members repeat at **{gold.get('Gold member'):.1f}%** vs
-**{gold.get('Non-member'):.1f}%** for non-members.
+consume the heaviest discounts. Members repeat at **{member.get('Member'):.1f}%** vs
+**{member.get('Non-member'):.1f}%** for non-members.
 
 ## 3. The recommendation
 
@@ -254,7 +254,7 @@ project is built backwards from the decision:
 ## What's in the repo
 
 ```
-zomato-product-analytics/
+food-delivery-product-analytics/
 ├── README.md                      ← you are here
 ├── LEARN/                         ← SQL + product metrics + experimentation, from zero
 ├── INTERVIEW-PREP.md              ← 30-sec / 2-min pitch + the hard questions, answered
@@ -278,14 +278,14 @@ zomato-product-analytics/
 ├── dashboard/app.py               Streamlit self-serve dashboard
 ├── notebooks/analysis.ipynb       the narrative walkthrough
 ├── charts/                        12 publication-styled charts
-└── data/                          CSVs + zomato.db (SQLite)
+└── data/                          CSVs + delivery.db (SQLite)
 ```
 
 ## Reproduce it
 
 ```bash
 pip install -r requirements.txt
-python3 src/generate_data.py     # build data/zomato.db      (~10s, seeded)
+python3 src/generate_data.py     # build data/delivery.db      (~10s, seeded)
 python3 src/run_analysis.py      # all analyses -> charts/ + reports/results.json
 python3 src/make_report.py       # regenerate README + executive summary
 python3 src/monitor.py           # weekly metric health check (exit 1 if RED)

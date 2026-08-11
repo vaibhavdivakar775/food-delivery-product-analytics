@@ -26,7 +26,7 @@ If I can't defend a number, it does not belong in the project.
    only. Guardrails = cancellation rate, delivery time, rating, discount % of GMV.
 3. **Where it leaks.** Cohort heatmap → the whole loss is in month 1. Split the retention
    curve by first-delivery experience → late-first-delivery users sit permanently lower.
-4. **Is it causal?** Stratified across 69 city × channel × Gold × platform cells: gap goes
+4. **Is it causal?** Stratified across 69 city × channel × membership × platform cells: gap goes
    12.2pp → 11.8pp. Dose–response is monotone past the 10-minute mark. Not proof, but
    strong enough to fund an ops change and a proper geo test.
 5. **The second leak.** Funnel: biggest drop is checkout→payment. Segmented: Android 62%
@@ -58,7 +58,7 @@ the order forward" failure mode.
 
 ### "Your late-delivery finding is correlational. Convince me."
 Three things, and I'll say up front it's not proof:
-1. **Stratification.** Within like-for-like cells (city × channel × Gold × platform) the
+1. **Stratification.** Within like-for-like cells (city × channel × membership × platform) the
    gap barely moves: 12.2pp → 11.8pp. So it isn't composition.
 2. **Dose–response.** Flat for the first 10 minutes, then a cliff. Confounders rarely
    produce a threshold-shaped curve that lines up with the promise the user was given.
@@ -69,7 +69,7 @@ Three things, and I'll say up front it's not proof:
    ask for next, and I'd rather say that than overclaim.
 
 ### "The reverse-causation version: maybe low-intent users order at peak, and peak is late."
-That's the right challenge, and it's exactly why platform, channel and Gold status are in
+That's the right challenge, and it's exactly why platform, channel and membership status are in
 the stratification — those are the observable proxies for intent. It's also why the
 dose–response matters: within the *same* peak hour, a 25-minute overrun hurts much more
 than a 5-minute one, and intent doesn't vary with the rider's traffic.
@@ -127,7 +127,7 @@ because the funnel came out suspiciously flat. That debugging is in the commit h
 - Add **survival analysis** for time-to-second-order instead of a binary 30-day flag —
   the binary throws away information about *how fast* users come back.
 
-### "How would you extend this to Blinkit's 10-minute model?"
+### "How would you extend this to a 10-minute quick-commerce model?"
 The structure holds but the constants change. Quick commerce has much higher order
 frequency, so the equivalent north star is more like **7-day repeat rate** or weekly
 orders per active user, and the retention window compresses accordingly. The lateness
@@ -151,7 +151,7 @@ size*, fixed, not the number of users active in the previous period — otherwis
 The lateness impact estimate. It multiplies a 6pp assumed reduction by an observational
 11.8pp effect by 2.72 measured orders per retained user — three numbers, and only the last
 is measured. The direction is solid; the magnitude is a planning estimate, not a forecast,
-and I'd present it as a range in a real review. The second-weakest is that "Gold members
+and I'd present it as a range in a real review. The second-weakest is that "Members
 repeat at 48%" is mostly selection, and I deliberately kept it out of the recommendations
 because I can't separate the subscription's effect from the fact that people who intend to
 order a lot are the ones who subscribe.

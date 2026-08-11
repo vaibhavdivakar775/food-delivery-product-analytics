@@ -76,7 +76,7 @@ WITH first_order AS (
     WHERE status='delivered' GROUP BY user_id
 ),
 per_user AS (
-    SELECT u.user_id, u.acquisition_channel, u.is_gold,
+    SELECT u.user_id, u.acquisition_channel, u.is_member,
            COUNT(o.order_id)  AS orders,
            SUM(o.gmv)         AS gmv,
            SUM(o.discount)    AS discount

@@ -21,7 +21,7 @@ the business problem: not traffic, not supply — **the second order**.
 **Finding 1 — A late first delivery is the single largest killer of the second order.**
 Users whose first order arrived >10 min past the promised ETA repeat at
 **20.5%** vs **32.6%** for on-time users — a **12.2pp** raw gap
-(p < 0.001). Held constant within 69 city × channel × Gold × platform cells covering
+(p < 0.001). Held constant within 69 city × channel × membership × platform cells covering
 30,054 users, the gap is still **11.8pp**, and it shows a clean
 dose–response once the ETA is genuinely missed:
   - Early / on time: **32.9%** repeat (n = 7,196)
@@ -43,7 +43,7 @@ the signature of a defect, not of user intent. At current volume that is
 
 **Finding 3 — We are buying the wrong users.**
 Paid-social users repeat at **21.6%** vs **35.5%** for referral, and
-consume the heaviest discounts. Gold members repeat at **48.2%** vs
+consume the heaviest discounts. Members repeat at **48.2%** vs
 **26.5%** for non-members.
 
 ## 3. The recommendation

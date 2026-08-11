@@ -63,7 +63,7 @@ from sqlkit import connect, resolve
 pd.set_option("display.width", 120)
 pd.set_option("display.max_columns", 30)
 
-a = connect()          # opens data/zomato.db and parses every sql/*.sql block
+a = connect()          # opens data/delivery.db and parses every sql/*.sql block
 print("SQL blocks available:", ", ".join(sorted(a.blocks)))
 """),
 
@@ -75,7 +75,7 @@ Four tables, shaped the way a real event-driven product warehouse is shaped:
 
 | table | grain | what it is |
 |---|---|---|
-| `users` | one row per user | signup date, city, platform, acquisition channel, Gold flag |
+| `users` | one row per user | signup date, city, platform, acquisition channel, membership flag |
 | `orders` | one row per order | GMV, discount, promised vs actual delivery time, rating, status |
 | `app_events` | one row per session × funnel step | `app_open → search → restaurant_view → add_to_cart → checkout_start → payment_success` |
 | `ab_test_assignments` | one row per experiment participant | variant, primary metric, guardrail metrics |
@@ -211,7 +211,7 @@ paid-social users — and *those* users would have churned anyway.
 Three tests before I believe this:
 
 1. **Stratification** — compare late vs on-time users *within* the same city × channel ×
-   Gold × platform cell, then re-weight by cell size. If the gap survives, it isn't
+   membership × platform cell, then re-weight by cell size. If the gap survives, it isn't
    composition.
 2. **Dose–response** — done above.
 3. **A randomised experiment** — section 7.
@@ -232,13 +232,13 @@ lateness is *the biggest* one rather than just *a* one:
 | driver | spread in 30-day repeat rate |
 |---|---|
 | **Late first delivery** | **{R['raw_gap_pp']:.1f}pp** |
-| Gold membership | ~22pp — but that is selection: people who subscribe already intended to order more |
+| Membership | ~22pp — but that is selection: people who subscribe already intended to order more |
 | Acquisition channel | ~14pp (referral vs paid-social) |
 | First-order rating | ~12pp — largely *downstream of* lateness, not independent of it |
 | City | ~3pp |
 | Platform | ~1.4pp |
 
-Gold and channel are things we *select*, not things we *do*. Lateness is something we
+membership and channel are things we *select*, not things we *do*. Lateness is something we
 **control** — which makes it the actionable driver.
 """),
 

@@ -27,7 +27,7 @@ os.makedirs(REPORTS, exist_ok=True)
 # Chart styling — one place, so every chart looks like it came from the same deck.
 # ---------------------------------------------------------------------------------
 RED, DARK, GREY, GREEN, AMBER = "#E23744", "#1C1C1C", "#8E8E93", "#2E9E5B", "#E8A33D"
-CMAP = LinearSegmentedColormap.from_list("zom", ["#FDECEE", "#F4A0A8", RED, "#8E1620"])
+CMAP = LinearSegmentedColormap.from_list("brand", ["#FDECEE", "#F4A0A8", RED, "#8E1620"])
 
 plt.rcParams.update({
     "figure.dpi": 130, "savefig.dpi": 130, "savefig.bbox": "tight",

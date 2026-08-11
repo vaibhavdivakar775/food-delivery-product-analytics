@@ -28,7 +28,7 @@ even if lateness itself changed nothing.
 ### Your three defences
 
 **1. Stratification.** Compare late vs on-time users *inside* the same box — same city,
-same acquisition channel, same Gold status, same platform — then re-weight the boxes by
+same acquisition channel, same membership status, same platform — then re-weight the boxes by
 size. If Bengaluru were the explanation, the gap would collapse once you compare Bengaluru
 to Bengaluru.
 

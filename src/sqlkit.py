@@ -18,7 +18,7 @@ import sqlite3
 import pandas as pd
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(HERE, "data", "zomato.db")
+DB = os.path.join(HERE, "data", "delivery.db")
 SQL_DIR = os.path.join(HERE, "sql")
 
 

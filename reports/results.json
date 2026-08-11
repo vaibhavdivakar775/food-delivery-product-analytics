@@ -571,13 +571,13 @@
       "repeat_pct": 22.3
     },
     {
-      "dimension": "gold",
-      "value": "Gold member",
+      "dimension": "member",
+      "value": "Member",
       "users": 5086,
       "repeat_pct": 48.21
     },
     {
-      "dimension": "gold",
+      "dimension": "member",
       "value": "Non-member",
       "users": 26641,
       "repeat_pct": 26.47

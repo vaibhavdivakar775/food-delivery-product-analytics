@@ -89,7 +89,7 @@ project is built backwards from the decision:
 ## What's in the repo
 
 ```
-zomato-product-analytics/
+food-delivery-product-analytics/
 ├── README.md                      ← you are here
 ├── LEARN/                         ← SQL + product metrics + experimentation, from zero
 ├── INTERVIEW-PREP.md              ← 30-sec / 2-min pitch + the hard questions, answered
@@ -113,14 +113,14 @@ zomato-product-analytics/
 ├── dashboard/app.py               Streamlit self-serve dashboard
 ├── notebooks/analysis.ipynb       the narrative walkthrough
 ├── charts/                        12 publication-styled charts
-└── data/                          CSVs + zomato.db (SQLite)
+└── data/                          CSVs + delivery.db (SQLite)
 ```
 
 ## Reproduce it
 
 ```bash
 pip install -r requirements.txt
-python3 src/generate_data.py     # build data/zomato.db      (~10s, seeded)
+python3 src/generate_data.py     # build data/delivery.db      (~10s, seeded)
 python3 src/run_analysis.py      # all analyses -> charts/ + reports/results.json
 python3 src/make_report.py       # regenerate README + executive summary
 python3 src/monitor.py           # weekly metric health check (exit 1 if RED)

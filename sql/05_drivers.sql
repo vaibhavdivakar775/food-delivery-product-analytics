@@ -3,7 +3,7 @@
 -- The whole project hinges on this file, so it is deliberately careful:
 --   (a) a raw comparison,
 --   (b) the same comparison STRATIFIED by the obvious confounders (city, channel,
---       Gold, platform) so we are not just re-discovering "Bengaluru has bad traffic
+--       membership, platform) so we are not just re-discovering "Bengaluru has bad traffic
 --       AND different users",
 --   (c) a dose-response check (more minutes late -> lower repeat rate).
 -- If an effect survives stratification and shows a dose-response, it is worth acting on.
@@ -31,7 +31,7 @@ repeat_flag AS (
     FROM fo JOIN orders o ON o.user_id = fo.user_id AND o.status='delivered'
     GROUP BY fo.user_id
 )
-SELECT fo.*, u.acquisition_channel, u.is_gold, r.repeated_30d,
+SELECT fo.*, u.acquisition_channel, u.is_member, r.repeated_30d,
        ROUND(fo.delivery_minutes - fo.promised_minutes, 1) AS minutes_late
 FROM fo
 JOIN users u  ON u.user_id = fo.user_id
@@ -48,11 +48,11 @@ GROUP BY 1 ORDER BY 1;
 
 
 -- name: repeat_by_late_stratified
--- Same effect, held constant within city x channel x gold x platform cells.
+-- Same effect, held constant within city x channel x membership x platform cells.
 -- We then weight each cell by its size to get an adjusted overall gap.
 WITH f AS ({first_order_features}),
 cells AS (
-    SELECT city, acquisition_channel, is_gold, platform,
+    SELECT city, acquisition_channel, is_member, platform,
            SUM(CASE WHEN is_late=1 THEN 1 ELSE 0 END)                       AS n_late,
            SUM(CASE WHEN is_late=0 THEN 1 ELSE 0 END)                       AS n_ontime,
            AVG(CASE WHEN is_late=1 THEN 1.0*repeated_30d END)               AS p_late,
@@ -97,7 +97,7 @@ SELECT 'channel', acquisition_channel, COUNT(*), ROUND(100.0*AVG(repeated_30d),2
 UNION ALL
 SELECT 'platform', platform, COUNT(*), ROUND(100.0*AVG(repeated_30d),2) FROM f GROUP BY 2
 UNION ALL
-SELECT 'gold', CASE is_gold WHEN 1 THEN 'Gold member' ELSE 'Non-member' END,
+SELECT 'member', CASE is_member WHEN 1 THEN 'Member' ELSE 'Non-member' END,
        COUNT(*), ROUND(100.0*AVG(repeated_30d),2) FROM f GROUP BY 2
 UNION ALL
 SELECT 'first_rating', CASE WHEN rating >= 4.5 THEN '4.5-5.0'

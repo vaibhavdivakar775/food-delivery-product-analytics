@@ -94,7 +94,7 @@ paid to acquire and never recovered.
 
 That's why "30% second-order rate" is not a soft problem. It's the business.
 
-> **Blinkit / quick commerce version:** dark stores instead of restaurants, 10-minute
+> **Quick-commerce version (10-minute grocery):** dark stores instead of restaurants, 10-minute
 > promise, smaller baskets but much higher frequency, and *item availability* becomes a
 > funnel step that food delivery doesn't have. Same skeleton, different constants.
 

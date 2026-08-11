@@ -2,7 +2,7 @@
 generate_data.py
 ================
 Builds a realistic, SIMULATED food-delivery dataset for the "Second Order Problem"
-analysis, then loads it into a SQLite database (`data/zomato.db`).
+analysis, then loads it into a SQLite database (`data/delivery.db`).
 
 WHY SIMULATED (be honest about this in interviews):
   Public food-delivery datasets have orders but no *event/clickstream* data, and no
@@ -15,7 +15,7 @@ THE GROUND TRUTH BAKED IN (the analysis must rediscover these, not assume them):
   1. A LATE first delivery is the single biggest killer of the 2nd order.
   2. The checkout -> payment step leaks badly on Android (a UPI/payment-SDK failure).
   3. Paid-social users are cheap to acquire but repeat poorly (discount-chasers).
-  4. Gold (subscription) members repeat far more -- partly selection, partly the product.
+  4. Premium (paid membership) members repeat far more -- partly selection, partly the product.
   5. A post-first-order "₹75 off your next order within 7 days" nudge lifts the repeat
      rate by roughly +3pp absolute (this is what the A/B test should detect).
 
@@ -71,18 +71,18 @@ def make_users() -> pd.DataFrame:
     platform = RNG.choice(PLATFORMS, size=n, p=PLATFORM_W)
     channel = RNG.choice(CHANNELS, size=n, p=CHANNEL_W)
 
-    # Gold (subscription) adoption: higher for iOS + organic/referral users.
-    p_gold = (0.10
+    # Premium (paid membership) adoption: higher for iOS + organic/referral users.
+    p_member = (0.10
               + 0.06 * (platform == "iOS")
               + 0.05 * np.isin(channel, ["organic", "referral"]))
-    is_gold = RNG.random(n) < p_gold
+    is_member = RNG.random(n) < p_member
 
     # Latent "affinity": how much this user intrinsically likes ordering food online.
     # Normally distributed; drives both order frequency and basket size.
     affinity = RNG.normal(0, 1, n)
     # paid_social skews to low-affinity, discount-chasing users
     affinity -= 0.35 * (channel == "paid_social")
-    affinity += 0.30 * is_gold
+    affinity += 0.30 * is_member
 
     return pd.DataFrame({
         "user_id": np.arange(1, n + 1),
@@ -90,7 +90,7 @@ def make_users() -> pd.DataFrame:
         "city": city,
         "platform": platform,
         "acquisition_channel": channel,
-        "is_gold": is_gold.astype(int),
+        "is_member": is_member.astype(int),
         "_affinity": affinity,          # underscore = latent, dropped before export
     })
 
@@ -125,7 +125,7 @@ def make_orders(users: pd.DataFrame):
     rng = RNG
     n = len(users)
     aff = users["_affinity"].to_numpy()
-    gold = users["is_gold"].to_numpy()
+    member = users["is_member"].to_numpy()
     ch = users["acquisition_channel"].to_numpy()
     city = users["city"].to_numpy()
     plat = users["platform"].to_numpy()
@@ -133,7 +133,7 @@ def make_orders(users: pd.DataFrame):
 
     # ---- (a) activation: does the user ever place a first order? -----------------
     p_activate = _sigmoid(0.95 + 0.55 * aff
-                          + 0.35 * gold
+                          + 0.35 * member
                           - 0.25 * (ch == "paid_social"))
     activated = rng.random(n) < p_activate
 
@@ -181,15 +181,15 @@ def make_orders(users: pd.DataFrame):
     f_late = f_actual > f_promised + 10           # "late" = >10 min past promise
 
     # basket size / GMV
-    def gmv_for(aff_slice, gold_slice, k):
-        base = 380 + 90 * aff_slice + 40 * gold_slice
+    def gmv_for(aff_slice, member_slice, k):
+        base = 380 + 90 * aff_slice + 40 * member_slice
         return np.clip(base + rng.normal(0, 110, k), 120, 3000).round(0)
 
-    f_gmv = gmv_for(aff[f_idx], gold[f_idx], m)
+    f_gmv = gmv_for(aff[f_idx], member[f_idx], m)
     # first-order discount is heavy (acquisition promo), heaviest on paid_social
     f_disc = np.clip(f_gmv * (0.28 + 0.10 * (ch[f_idx] == "paid_social")
                               + rng.normal(0, 0.05, m)), 0, None).round(0)
-    f_deliv_fee = np.where(gold[f_idx] == 1, 0, rng.choice([0, 25, 35, 45], m, p=[.15, .35, .30, .20]))
+    f_deliv_fee = np.where(member[f_idx] == 1, 0, rng.choice([0, 25, 35, 45], m, p=[.15, .35, .30, .20]))
 
     # rating: driven mostly by lateness
     f_rating_lat = 4.55 - 0.055 * np.clip(f_actual - f_promised, 0, None) + rng.normal(0, 0.45, m)
@@ -219,7 +219,7 @@ def make_orders(users: pd.DataFrame):
     # log-odds of placing a 2nd order within 30 days of the first
     lo = (-1.05
           + 0.60 * aff[f_idx]
-          + 0.85 * gold[f_idx]
+          + 0.85 * member[f_idx]
           - 0.62 * f_late                                  # <-- the headline driver
           - 0.45 * f_cancel
           + 0.22 * (f_rating >= 4.5)
@@ -233,7 +233,7 @@ def make_orders(users: pd.DataFrame):
     s_idx = np.where(second)[0]                 # index INTO first_orders
     k = len(s_idx)
     # how many extra orders (2nd, 3rd, ...) before the data cut-off
-    lam = np.clip(2.2 + 1.6 * aff[f_idx][s_idx] + 2.4 * gold[f_idx][s_idx], 0.6, 14)
+    lam = np.clip(2.2 + 1.6 * aff[f_idx][s_idx] + 2.4 * member[f_idx][s_idx], 0.6, 14)
     # scale by how much time is left in the observation window
     days_left = (END - pd.Series(first_orders["order_ts"].to_numpy()[s_idx])).dt.days.to_numpy()
     lam = lam * np.clip(days_left / 120.0, 0.15, 1.6)
@@ -270,9 +270,9 @@ def make_orders(users: pd.DataFrame):
         rep["platform"] = plat[u_i]
         rep["cuisine"] = rng.choice(CUISINES, r, p=CUISINE_W)
         # repeat orders: bigger basket, much smaller discount (this is the margin story)
-        rep["gmv"] = gmv_for(aff[u_i], gold[u_i], r) + 45
+        rep["gmv"] = gmv_for(aff[u_i], member[u_i], r) + 45
         rep["discount"] = np.clip(rep["gmv"] * (0.09 + rng.normal(0, 0.04, r)), 0, None).round(0)
-        rep["delivery_fee"] = np.where(gold[u_i] == 1, 0,
+        rep["delivery_fee"] = np.where(member[u_i] == 1, 0,
                                        rng.choice([0, 25, 35, 45], r, p=[.15, .35, .30, .20]))
         rep["promised_minutes"] = promised
         rep["delivery_minutes"] = np.round(actual, 1)
@@ -462,7 +462,7 @@ def main():
     events.to_csv(f"{DATA}/app_events.csv", index=False)
     exp.to_csv(f"{DATA}/ab_test_assignments.csv", index=False)
 
-    db = f"{DATA}/zomato.db"
+    db = f"{DATA}/delivery.db"
     if os.path.exists(db):
         os.remove(db)
     con = sqlite3.connect(db)

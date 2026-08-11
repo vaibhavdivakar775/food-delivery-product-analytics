@@ -7,7 +7,7 @@ sql.py — a tiny SQL scratchpad so practising is frictionless.
     python3 src/sql.py --block cohort_matrix   # run a named block from sql/*.sql
     python3 src/sql.py                     # interactive mode: type queries, see results
 
-No setup, no server, no login — the database is a single file at data/zomato.db.
+No setup, no server, no login — the database is a single file at data/delivery.db.
 """
 
 import argparse
@@ -40,7 +40,7 @@ def list_tables(a):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Run SQL against data/zomato.db")
+    ap = argparse.ArgumentParser(description="Run SQL against data/delivery.db")
     ap.add_argument("query", nargs="?", help="SQL to run (quote it)")
     ap.add_argument("-f", "--file", help="run SQL from a file")
     ap.add_argument("--block", help="run a named block from sql/*.sql, e.g. cohort_matrix")
@@ -49,7 +49,7 @@ def main():
     args = ap.parse_args()
 
     if not os.path.exists(DB):
-        sys.exit("data/zomato.db not found — run:  python3 src/generate_data.py")
+        sys.exit("data/delivery.db not found — run:  python3 src/generate_data.py")
 
     a = connect()
 

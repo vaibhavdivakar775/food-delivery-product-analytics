@@ -25,7 +25,7 @@ Four spreadsheets that know how to reference each other. That's it.
 
 | table | one row = | key columns |
 |---|---|---|
-| `users` | one registered user | `user_id`, `signup_date`, `city`, `platform`, `acquisition_channel`, `is_gold` |
+| `users` | one registered user | `user_id`, `signup_date`, `city`, `platform`, `acquisition_channel`, `is_member` |
 | `orders` | one order | `order_id`, `user_id`, `order_ts`, `gmv`, `is_late`, `delivery_minutes`, `status` |
 | `app_events` | one session doing one funnel step | `session_id`, `user_id`, `event_name`, `step_no` |
 | `ab_test_assignments` | one user in the experiment | `user_id`, `variant`, `repeat_within_14d` |
@@ -293,7 +293,7 @@ technique, not a trick.
 > questions.** Being able to say exactly that, calmly, when an interviewer points at two
 > numbers that don't match is worth more than either number. Definitions are the job.
 
-**Exercise 4.** Do Gold members (`is_gold = 1`) have a higher average order value than
+**Exercise 4.** Do Members (`is_member = 1`) have a higher average order value than
 non-members?
 
 ---
@@ -542,7 +542,7 @@ FROM orders WHERE status='delivered' GROUP BY 1"
 
 # 4
 python3 src/sql.py "
-SELECT u.is_gold, COUNT(*) AS orders, ROUND(AVG(o.gmv),0) AS aov
+SELECT u.is_member, COUNT(*) AS orders, ROUND(AVG(o.gmv),0) AS aov
 FROM orders o JOIN users u ON u.user_id=o.user_id
 WHERE o.status='delivered' GROUP BY 1"
 

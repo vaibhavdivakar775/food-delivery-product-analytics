@@ -74,7 +74,7 @@ def build(R, a):
         f"""The lateness impact estimate. It multiplies an assumed 6pp reduction in the late
         rate by an observational {ST['adjusted_gap_pp']:.1f}pp effect by {IMP['orders_per_retained_user_measured']} measured orders per retained
         user -- three numbers, only the last measured. Direction solid, magnitude is a
-        planning estimate. Second weakest: Gold members repeat at 48% but that's mostly
+        planning estimate. Second weakest: Members repeat at 48% but that's mostly
         selection, which is why I kept it out of the recommendations.""")
 
     # ---------------------------------------------------------------- metrics
@@ -185,7 +185,7 @@ def build(R, a):
     add("experiment",
         "Your lateness finding is correlational. Convince me.",
         f"""Three things, and I'll say up front it isn't proof. One, stratification: within 69
-        like-for-like cells -- same city, channel, Gold status, platform -- the gap only
+        like-for-like cells -- same city, channel, membership status, platform -- the gap only
         moves from {R['raw_gap_pp']:.1f}pp to {ST['adjusted_gap_pp']:.1f}pp, so composition explains almost none of it. Two,
         dose-response: flat for ten minutes then a cliff, and confounders rarely produce a
         threshold shape that lines up with the promise the user was given. Three, a
