@@ -321,7 +321,7 @@ def main():
     ax.set_ylabel("Repeat order within 14 days (%)")
     ax.set_ylim(0, max(vals) * 1.45)
     subtitle(ax, f"Next-Order Nudge: +{ab['abs_lift_pp']:.2f}pp "
-                 f"({ab['rel_lift_pct']:.1f}% relative), p = {ab['p_value']:.4f}",
+                 f"({ab['rel_lift_pct']:.1f}% relative), p {ab['p_value_str']}",
              f"95% CI on the absolute lift: [{ab['ci_low_pp']:.2f}pp, {ab['ci_high_pp']:.2f}pp] · "
              f"n = {int(t.n):,} vs {int(c.n):,}")
     save(fig, "10_ab_test.png")
@@ -351,7 +351,7 @@ def main():
         print(f"  {k:>34}: {v}")
 
     fig, ax = plt.subplots(figsize=(7.6, 4))
-    names = ["Fix Android\npayment step", "Cut late deliveries\n(BLR/DEL peak)",
+    names = ["Fix Android\npayment step", "Cut late deliveries\n(worst city × daypart)",
              "Ship Next-Order\nNudge"]
     vals = [impact["android_fix_gmv_lakh_yr"], impact["lateness_fix_gmv_lakh_yr"],
             impact["nudge_net_gmv_lakh_yr"]]
