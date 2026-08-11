@@ -24,6 +24,7 @@
 | **Estimated impact** | **≈ ₹86 lakh incremental GMV per year** on a 60k-user base, assumptions stated |
 
 📄 **[Read the 1-page executive summary →](reports/EXECUTIVE_SUMMARY.md)**
+📚 **[Learn everything in this repo from scratch →](LEARN/00-START-HERE.md)**
 📓 **[Read the full analysis notebook →](notebooks/analysis.ipynb)**
 🎤 **[Interview walkthrough & defence of every choice →](INTERVIEW-PREP.md)**
 
@@ -90,6 +91,7 @@ project is built backwards from the decision:
 ```
 zomato-product-analytics/
 ├── README.md                      ← you are here
+├── LEARN/                         ← SQL + product metrics + experimentation, from zero
 ├── INTERVIEW-PREP.md              ← 30-sec / 2-min pitch + the hard questions, answered
 ├── reports/
 │   ├── EXECUTIVE_SUMMARY.md       ← the 1-pager for a PM
