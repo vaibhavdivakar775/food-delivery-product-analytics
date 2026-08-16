@@ -53,18 +53,14 @@ ORDER BY pct_gmv DESC;
 
 -- name: behaviour_by_channel
 -- Acquisition-channel quality: cheap traffic that never repeats is not growth.
-WITH first_order AS (
-    SELECT user_id, MIN(order_ts) AS first_ts FROM orders
-    WHERE status='delivered' GROUP BY user_id
-),
-per_user AS (
-    SELECT u.user_id, u.acquisition_channel, u.is_member,
+WITH per_user AS (              -- one row per user who has ever ordered
+    SELECT u.user_id, u.acquisition_channel,
            COUNT(o.order_id)  AS orders,
            SUM(o.gmv)         AS gmv,
            SUM(o.discount)    AS discount
     FROM users u
     JOIN orders o ON o.user_id = u.user_id AND o.status='delivered'
-    GROUP BY 1,2,3
+    GROUP BY 1,2
 )
 SELECT acquisition_channel,
        COUNT(*)                                              AS ordering_users,

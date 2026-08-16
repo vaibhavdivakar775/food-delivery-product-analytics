@@ -16,7 +16,6 @@ WITH first_order AS (
 activity AS (
     SELECT f.user_id,
            f.cohort_month,
-           STRFTIME('%Y-%m', o.order_ts)       AS active_month,
            -- months elapsed = 12*(year diff) + (month diff)
            (CAST(STRFTIME('%Y', o.order_ts) AS INT) - CAST(STRFTIME('%Y', f.first_ts) AS INT)) * 12
          + (CAST(STRFTIME('%m', o.order_ts) AS INT) - CAST(STRFTIME('%m', f.first_ts) AS INT))

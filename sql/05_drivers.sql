@@ -15,11 +15,10 @@ WITH firsts AS (
     SELECT user_id, MIN(order_ts) AS first_ts
     FROM orders WHERE status='delivered' GROUP BY user_id
 ),
-fo AS (
-    SELECT f.user_id, f.first_ts, o.order_id AS first_order_id,
-           o.city, o.platform, o.cuisine, o.gmv AS first_gmv, o.discount AS first_discount,
-           o.delivery_minutes, o.promised_minutes, o.is_late, o.rating,
-           CAST(STRFTIME('%H', o.order_ts) AS INT) AS first_hour
+fo AS (                       -- the first order's ATTRIBUTES, not just its timestamp
+    SELECT f.user_id, f.first_ts,
+           o.city, o.platform, o.is_late, o.rating,
+           o.delivery_minutes, o.promised_minutes
     FROM firsts f
     JOIN orders o ON o.user_id = f.user_id AND o.order_ts = f.first_ts
 ),
