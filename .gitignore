@@ -10,3 +10,4 @@ logs/
 data/*.csv
 data/*.db
 !data/samples/
+src/sql.py

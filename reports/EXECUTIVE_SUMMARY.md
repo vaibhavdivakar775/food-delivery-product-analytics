@@ -22,15 +22,17 @@ the business problem: not traffic, not supply — **the second order**.
 Users whose first order arrived >10 min past the promised ETA repeat at
 **20.5%** vs **32.6%** for on-time users — a **12.2pp** raw gap
 (p < 0.001). Held constant within 69 city × channel × membership × platform cells covering
-30,054 users, the gap is still **11.8pp**, and it shows a clean
-dose–response once the ETA is genuinely missed:
+30,054 users, the gap is still **11.8pp** — it barely moves, which is
+what rules out composition as the explanation. The shape is a **threshold effect**:
   - Early / on time: **32.9%** repeat (n = 7,196)
   - 0-10 min late: **32.5%** repeat (n = 17,592)
   - 10-20 min late: **20.4%** repeat (n = 6,376)
   - 20-30 min late: **20.9%** repeat (n = 536)
   - 30+ min late: **11.1%** repeat (n = 27)
-(the first ~10 minutes cost nothing — users forgive a small overrun, which is exactly
-why the "late" threshold is set at 10 minutes rather than 0.)
+Nothing happens for the first ~10 minutes, then it steps down — which is why the "late"
+threshold is set at 10 minutes rather than 0. Two caveats I'd flag on my own chart: the
+bottom bucket is only 27 users, so its rate is noise; and the 10–20 and 20–30 buckets are
+flat rather than declining, so this is a threshold, not a smooth dose–response.
 Lateness is **concentrated**, not systemic: Bengaluru at
 dinner peak runs **38.0%** late vs
 a **20.7%** company average.

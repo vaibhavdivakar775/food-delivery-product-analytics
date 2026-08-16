@@ -16,7 +16,7 @@
 |---|---|
 | **Business question** | Why do new users not place a second order, and which fix is worth the most GMV? |
 | **North-star metric** | 30-day repeat rate of new users — currently **29.9%** |
-| **Finding 1** | A **late first delivery** cuts the 30-day repeat rate by **11.8pp** (confounder-adjusted), with a clean dose–response |
+| **Finding 1** | A **late first delivery** cuts the 30-day repeat rate by **11.8pp** (12.2pp raw, adjusted across 69 confounder cells), with a threshold effect at the promised ETA |
 | **Finding 2** | Checkout→payment converts at **62.0% on Android vs 81.0% on iOS** — one broken step, ~**15,491** lost orders in 6 months |
 | **Finding 3** | Paid-social users repeat at **21.6%** vs **35.5%** for referral, on the heaviest discounts |
 | **Experiment** | "Next-Order Nudge" (₹75 off, 7 days): **+3.29pp** repeat rate, 95% CI [2.15, 4.43], p < 0.0001 |
@@ -24,9 +24,6 @@
 | **Estimated impact** | **≈ ₹86 lakh incremental GMV per year** on a 60k-user base, assumptions stated |
 
 📄 **[Read the 1-page executive summary →](reports/EXECUTIVE_SUMMARY.md)**
-📚 **[Learn everything in this repo from scratch →](LEARN/00-START-HERE.md)**
-📓 **[Read the full analysis notebook →](notebooks/analysis.ipynb)**
-🎤 **[Interview walkthrough & defence of every choice →](INTERVIEW-PREP.md)**
 
 ---
 
@@ -40,7 +37,8 @@
 
 ![retention by first delivery](charts/03_retention_by_first_delivery.png)
 
-**More lateness → less repeat. The monotone slope is why I treat this as causal.**
+**The first ~10 minutes are free; past the promised ETA, repeat rate steps down. A
+threshold that lines up with the promise is hard for a confounder to fake.**
 
 ![dose response](charts/07_dose_response.png)
 
@@ -91,8 +89,6 @@ project is built backwards from the decision:
 ```
 food-delivery-product-analytics/
 ├── README.md                      ← you are here
-├── LEARN/                         ← SQL + product metrics + experimentation, from zero
-├── INTERVIEW-PREP.md              ← 30-sec / 2-min pitch + the hard questions, answered
 ├── reports/
 │   ├── EXECUTIVE_SUMMARY.md       ← the 1-pager for a PM
 │   ├── weekly_monitor.md          ← auto-generated metric health report
@@ -101,7 +97,7 @@ food-delivery-product-analytics/
 │   ├── 01_metrics.sql             north star, guardrails, monthly trend
 │   ├── 02_cohort_retention.sql    cohort matrix + retention by first-delivery experience
 │   ├── 03_funnel.sql              session funnel, segmented, + "size the prize"
-│   ├── 04_segmentation.sql        RFM (NTILE), channel quality, time-of-day
+│   ├── 04_segmentation.sql        RFM (NTILE), acquisition-channel quality
 │   ├── 05_drivers.sql             driver analysis, stratification, dose–response
 │   └── 06_ab_test.sql             SRM check, balance, primary metric, guardrails, HTE
 ├── src/
@@ -111,7 +107,6 @@ food-delivery-product-analytics/
 │   ├── make_report.py             renders README + exec summary FROM results.json
 │   └── monitor.py                 weekly monitoring + RED/AMBER alerting, non-zero exit
 ├── dashboard/app.py               Streamlit self-serve dashboard
-├── notebooks/analysis.ipynb       the narrative walkthrough
 ├── charts/                        12 publication-styled charts
 └── data/                          CSVs + delivery.db (SQLite)
 ```
@@ -197,7 +192,10 @@ What this means for a reader:
 | Needs Attention | 6697 | 16.6 | 8.1 | 1.0 | 379.0 |
 | New / Promising | 5709 | 14.1 | 7.1 | 1.0 | 387.0 |
 
-**Acquisition channels**
+**Acquisition channels** — note `repeat_rate_pct` here is *lifetime* (≥2 orders ever, all
+ordering users). The executive summary quotes the **north-star definition** instead
+(repeat within 30 days, matured cohorts only), which runs ~2pp higher. Same ranking, and
+the ranking is the point.
 
 | acquisition_channel | ordering_users | repeat_rate_pct | orders_per_user | gmv_per_user | discount_pct_of_gmv |
 | --- | --- | --- | --- | --- | --- |

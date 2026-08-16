@@ -40,28 +40,6 @@ FROM step_sessions
 ORDER BY platform, step_no;
 
 
--- name: funnel_by_city
-WITH step_sessions AS (
-    SELECT city, step_no, COUNT(DISTINCT session_id) AS sessions
-    FROM app_events
-    GROUP BY 1, 2
-),
-pivoted AS (
-    SELECT city,
-           MAX(CASE WHEN step_no = 1 THEN sessions END) AS app_open,
-           MAX(CASE WHEN step_no = 4 THEN sessions END) AS add_to_cart,
-           MAX(CASE WHEN step_no = 5 THEN sessions END) AS checkout_start,
-           MAX(CASE WHEN step_no = 6 THEN sessions END) AS payment_success
-    FROM step_sessions GROUP BY city
-)
-SELECT city,
-       app_open,
-       ROUND(100.0 * payment_success / app_open, 1)      AS session_to_order_pct,
-       ROUND(100.0 * payment_success / checkout_start, 1) AS payment_success_pct
-FROM pivoted
-ORDER BY session_to_order_pct;
-
-
 -- name: payment_leak_size
 -- How many orders are we losing at the payment step on Android, if Android
 -- converted at the iOS rate? (The "size the prize" query.)

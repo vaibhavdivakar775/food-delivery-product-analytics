@@ -80,11 +80,13 @@ the business problem: not traffic, not supply — **the second order**.
 Users whose first order arrived >10 min past the promised ETA repeat at
 **{late_pct:.1f}%** vs **{ontime_pct:.1f}%** for on-time users — a **{R['raw_gap_pp']:.1f}pp** raw gap
 (p < 0.001). Held constant within {int(ST['cells_used'])} city × channel × membership × platform cells covering
-{int(ST['users_covered']):,} users, the gap is still **{ST['adjusted_gap_pp']:.1f}pp**, and it shows a clean
-dose–response once the ETA is genuinely missed:
+{int(ST['users_covered']):,} users, the gap is still **{ST['adjusted_gap_pp']:.1f}pp** — it barely moves, which is
+what rules out composition as the explanation. The shape is a **threshold effect**:
 {dose_txt}
-(the first ~10 minutes cost nothing — users forgive a small overrun, which is exactly
-why the "late" threshold is set at 10 minutes rather than 0.)
+Nothing happens for the first ~10 minutes, then it steps down — which is why the "late"
+threshold is set at 10 minutes rather than 0. Two caveats I'd flag on my own chart: the
+bottom bucket is only 27 users, so its rate is noise; and the 10–20 and 20–30 buckets are
+flat rather than declining, so this is a threshold, not a smooth dose–response.
 Lateness is **concentrated**, not systemic: {IMP['lateness_worst_cells'][0]['city']} at
 {IMP['lateness_worst_cells'][0]['daypart'].lower()} runs **{IMP['lateness_worst_cells'][0]['late_rate_pct']}%** late vs
 a **{H['late_delivery_rate_pct']}%** company average.
@@ -181,7 +183,7 @@ def readme() -> str:
 |---|---|
 | **Business question** | Why do new users not place a second order, and which fix is worth the most GMV? |
 | **North-star metric** | 30-day repeat rate of new users — currently **{NS['repeat_30d_rate_pct']:.1f}%** |
-| **Finding 1** | A **late first delivery** cuts the 30-day repeat rate by **{ST['adjusted_gap_pp']:.1f}pp** (confounder-adjusted), with a clean dose–response |
+| **Finding 1** | A **late first delivery** cuts the 30-day repeat rate by **{ST['adjusted_gap_pp']:.1f}pp** ({R['raw_gap_pp']:.1f}pp raw, adjusted across 69 confounder cells), with a threshold effect at the promised ETA |
 | **Finding 2** | Checkout→payment converts at **{LEAK['android_pay_conv_pct']}% on Android vs {LEAK['ios_pay_conv_pct']}% on iOS** — one broken step, ~**{int(LEAK['recoverable_orders_6mo']):,}** lost orders in 6 months |
 | **Finding 3** | Paid-social users repeat at **{chan30.get('paid_social'):.1f}%** vs **{chan30.get('referral'):.1f}%** for referral, on the heaviest discounts |
 | **Experiment** | "Next-Order Nudge" (₹75 off, 7 days): **{AB['abs_lift_pp']:+.2f}pp** repeat rate, 95% CI [{AB['ci_low_pp']:.2f}, {AB['ci_high_pp']:.2f}], p {AB['p_value_str']} |
@@ -189,9 +191,6 @@ def readme() -> str:
 | **Estimated impact** | **≈ ₹{IMP['total_gmv_lakh_yr']:.0f} lakh incremental GMV per year** on a {int(H['registered_users']/1000)}k-user base, assumptions stated |
 
 📄 **[Read the 1-page executive summary →](reports/EXECUTIVE_SUMMARY.md)**
-📚 **[Learn everything in this repo from scratch →](LEARN/00-START-HERE.md)**
-📓 **[Read the full analysis notebook →](notebooks/analysis.ipynb)**
-🎤 **[Interview walkthrough & defence of every choice →](INTERVIEW-PREP.md)**
 
 ---
 
@@ -205,7 +204,8 @@ def readme() -> str:
 
 ![retention by first delivery](charts/03_retention_by_first_delivery.png)
 
-**More lateness → less repeat. The monotone slope is why I treat this as causal.**
+**The first ~10 minutes are free; past the promised ETA, repeat rate steps down. A
+threshold that lines up with the promise is hard for a confounder to fake.**
 
 ![dose response](charts/07_dose_response.png)
 
@@ -256,8 +256,6 @@ project is built backwards from the decision:
 ```
 food-delivery-product-analytics/
 ├── README.md                      ← you are here
-├── LEARN/                         ← SQL + product metrics + experimentation, from zero
-├── INTERVIEW-PREP.md              ← 30-sec / 2-min pitch + the hard questions, answered
 ├── reports/
 │   ├── EXECUTIVE_SUMMARY.md       ← the 1-pager for a PM
 │   ├── weekly_monitor.md          ← auto-generated metric health report
@@ -266,7 +264,7 @@ food-delivery-product-analytics/
 │   ├── 01_metrics.sql             north star, guardrails, monthly trend
 │   ├── 02_cohort_retention.sql    cohort matrix + retention by first-delivery experience
 │   ├── 03_funnel.sql              session funnel, segmented, + "size the prize"
-│   ├── 04_segmentation.sql        RFM (NTILE), channel quality, time-of-day
+│   ├── 04_segmentation.sql        RFM (NTILE), acquisition-channel quality
 │   ├── 05_drivers.sql             driver analysis, stratification, dose–response
 │   └── 06_ab_test.sql             SRM check, balance, primary metric, guardrails, HTE
 ├── src/
@@ -276,7 +274,6 @@ food-delivery-product-analytics/
 │   ├── make_report.py             renders README + exec summary FROM results.json
 │   └── monitor.py                 weekly monitoring + RED/AMBER alerting, non-zero exit
 ├── dashboard/app.py               Streamlit self-serve dashboard
-├── notebooks/analysis.ipynb       the narrative walkthrough
 ├── charts/                        12 publication-styled charts
 └── data/                          CSVs + delivery.db (SQLite)
 ```
@@ -341,7 +338,10 @@ What this means for a reader:
 
 {md_table(rfm[['segment', 'users', 'pct_users', 'pct_gmv', 'avg_orders', 'avg_lifetime_gmv']])}
 
-**Acquisition channels**
+**Acquisition channels** — note `repeat_rate_pct` here is *lifetime* (≥2 orders ever, all
+ordering users). The executive summary quotes the **north-star definition** instead
+(repeat within 30 days, matured cohorts only), which runs ~2pp higher. Same ranking, and
+the ranking is the point.
 
 {md_table(ch)}
 

@@ -4,37 +4,19 @@
 -- Reference date = 2026-06-30 (the data cut-off).
 -- ===================================================================================
 
--- name: rfm_users
-WITH base AS (
-    SELECT user_id,
-           JULIANDAY('2026-06-30') - JULIANDAY(MAX(order_ts)) AS recency_days,
-           COUNT(*)                                           AS frequency,
-           SUM(gmv)                                           AS monetary
-    FROM orders
-    WHERE status = 'delivered'
-    GROUP BY user_id
-),
-scored AS (
-    SELECT *,
-           NTILE(5) OVER (ORDER BY recency_days DESC) AS r_score,   -- recent = high
-           NTILE(5) OVER (ORDER BY frequency ASC)     AS f_score,
-           NTILE(5) OVER (ORDER BY monetary ASC)      AS m_score
-    FROM base
-)
-SELECT user_id, recency_days, frequency, monetary, r_score, f_score, m_score,
-       CASE
-           WHEN r_score >= 4 AND f_score >= 4               THEN 'Champions'
-           WHEN r_score >= 3 AND f_score >= 3               THEN 'Loyal'
-           WHEN r_score >= 4 AND f_score <= 2               THEN 'New / Promising'
-           WHEN r_score <= 2 AND f_score >= 4               THEN 'At Risk (was valuable)'
-           WHEN r_score <= 2 AND f_score <= 2               THEN 'Hibernating / Churned'
-           ELSE 'Needs Attention'
-       END AS segment
-FROM scored;
-
-
 -- name: rfm_summary
 -- Size and value each segment: "who are they, how many, how much GMV do they carry?"
+--
+-- SEGMENT DEFINITION: segments are cut on RECENCY x FREQUENCY only. Monetary is
+-- reported per segment (gmv_lakh, avg_lifetime_gmv) but is deliberately NOT part of the
+-- segment rule, because in food delivery M is largely a function of F -- more orders
+-- means more spend -- so scoring on both double-counts the same behaviour and produces
+-- segments that are hard to act on. R and F answer the two questions a growth team can
+-- actually do something about: are they still here, and how often do they order?
+--
+-- NTILE(5) OVER (ORDER BY recency_days DESC): recency_days is "days since last order",
+-- so DESC puts the LARGEST gap first -- meaning tile 1 = most lapsed, tile 5 = most
+-- recent. Higher r_score = better, which is what the CASE below assumes.
 WITH base AS (
     SELECT user_id,
            JULIANDAY('2026-06-30') - JULIANDAY(MAX(order_ts)) AS recency_days,
@@ -93,12 +75,3 @@ SELECT acquisition_channel,
 FROM per_user
 GROUP BY 1
 ORDER BY repeat_rate_pct DESC;
-
-
--- name: hour_of_day
-SELECT CAST(STRFTIME('%H', order_ts) AS INT) AS hour,
-       COUNT(*)                              AS orders,
-       ROUND(AVG(gmv), 0)                    AS aov,
-       ROUND(100.0 * AVG(is_late), 1)        AS late_rate_pct
-FROM orders WHERE status='delivered'
-GROUP BY 1 ORDER BY 1;

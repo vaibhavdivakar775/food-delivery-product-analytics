@@ -75,11 +75,15 @@ ORDER BY 1;
 
 
 -- name: guardrails
--- GUARDRAIL metrics: things that must NOT get worse while we push the north star.
+-- GUARDRAIL metrics: the five things that must NOT get worse while we push the north
+-- star. A win on repeat rate that breaks any of these is not a win.
+--   1. cancellation rate      2. delivery time      3. rating
+--   4. discount % of GMV      5. net revenue per order
 SELECT STRFTIME('%Y-%m', order_ts)                                   AS month,
        ROUND(100.0 * AVG(CASE WHEN status='cancelled' THEN 1.0 ELSE 0 END), 2) AS cancel_rate_pct,
        ROUND(AVG(delivery_minutes), 1)                               AS avg_delivery_min,
        ROUND(AVG(rating), 2)                                         AS avg_rating,
+       ROUND(100.0 * SUM(discount) / SUM(gmv), 1)                    AS discount_pct_of_gmv,
        ROUND(AVG(gmv - discount), 0)                                 AS net_revenue_per_order
 FROM orders
 GROUP BY 1

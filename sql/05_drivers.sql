@@ -71,7 +71,9 @@ FROM cells;
 
 
 -- name: dose_response
--- Does *more* lateness hurt *more*? A monotone curve is strong evidence the
+-- Does *more* lateness hurt *more*? The answer here is a THRESHOLD, not a smooth slope:
+-- flat for the first 10 minutes, then a step down, then roughly flat again. A threshold
+-- that lands exactly where the promised ETA was broken is strong evidence the
 -- relationship is real and not an artifact of who happens to get late orders.
 SELECT CASE
          WHEN minutes_late <= 0  THEN '1. Early / on time'

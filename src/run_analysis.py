@@ -245,8 +245,8 @@ def main():
                     fontsize=8, color=GREY)
     ax.set_ylabel("30-day repeat rate (%)")
     ax.tick_params(axis="x", labelrotation=12)
-    subtitle(ax, "Dose–response: every extra 10 minutes late costs repeat orders",
-             "The monotone slope is why we treat this as causal, not just correlated")
+    subtitle(ax, "Lateness vs repeat rate: the first 10 minutes are free",
+             "A threshold at the promised ETA — harder for a confounder to fake than a slope")
     save(fig, "07_dose_response.png")
 
     fig, ax = plt.subplots(figsize=(8, 5))
