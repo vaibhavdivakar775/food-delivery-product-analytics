@@ -130,7 +130,7 @@ The data is **simulated**, deliberately and transparently.
 
 Public food-delivery datasets have orders but **no event/clickstream table and no
 experiment assignment table**, which makes funnel analysis and A/B analysis impossible.
-Rather than skip the two techniques the job actually asks for, I wrote a simulator with
+Rather than skip the two techniques this analysis depends on, I wrote a simulator with
 an explicit causal structure (`src/generate_data.py`, documented at the top of the file)
 and then tried to **recover** that structure with SQL and statistics — including one
 finding I got wrong on the first pass because my event generator silently erased the
@@ -206,5 +206,5 @@ the ranking is the point.
 
 ---
 
-*Built by Vaibhav Divakar · BITS Pilani (Goa), EEE, 2027 · targeting Product Analyst roles.
+*Built by Vaibhav Divakar · BITS Pilani (Goa), EEE, 2027.
 Feedback welcome — especially on the parts you think are wrong.*

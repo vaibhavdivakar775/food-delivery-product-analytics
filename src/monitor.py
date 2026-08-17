@@ -3,9 +3,9 @@ monitor.py — automated weekly metric monitoring + alerting.
 
 WHY THIS FILE EXISTS
   An analysis answers a question once. A *monitor* keeps answering it every week
-  without anyone re-running a notebook. This is the "drive automation and build
-  scalable reporting/monitoring solutions" part of the job: the same SQL that
-  produced the one-off insight is scheduled, thresholded, and alerted on.
+  without anyone re-running a notebook. The same SQL that produced the one-off
+  insight is scheduled, thresholded, and alerted on, so the answer cannot quietly
+  go stale after the deck is presented.
 
 WHAT IT DOES
   1. Computes this week's value for every tracked metric (north star, guardrails,

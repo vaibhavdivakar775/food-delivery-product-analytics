@@ -4,7 +4,7 @@ generate_data.py
 Builds a realistic, SIMULATED food-delivery dataset for the "Second Order Problem"
 analysis, then loads it into a SQLite database (`data/delivery.db`).
 
-WHY SIMULATED (be honest about this in interviews):
+WHY SIMULATED:
   Public food-delivery datasets have orders but no *event/clickstream* data, and no
   experiment assignment data. Funnel analysis and A/B analysis are impossible without
   them. So we generate data with a documented, explicit causal structure and then

@@ -427,8 +427,8 @@ def ab_readout(x_t, n_t, x_c, n_c, alpha=0.05):
 def impact_model(a, R):
     """
     Translate each finding into annual incremental GMV.
-    EVERY assumption is explicit and conservative — an interviewer will poke at these,
-    so they must be defensible, not optimistic.
+    EVERY assumption is explicit and conservative — a sceptical reader will poke at
+    these, so they must be defensible, not optimistic.
     """
     head = R["headline"]
     aov = float(head["aov"])
